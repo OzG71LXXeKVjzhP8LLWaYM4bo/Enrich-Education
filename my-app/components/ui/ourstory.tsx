@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -18,7 +18,7 @@ export default function OurStoryPage() {
                 Enrich Education was founded in 2010 by a group of passionate educators who saw the need for high-quality, personalized tutoring services in Burwood, Sydney. What started as a small tutoring center has grown into a comprehensive educational institution, serving hundreds of students across various subjects and grade levels.
               </p>
               <p>
-                Our founders vision was to create a learning environment where every student could thrive, regardless of their starting point or learning style. This vision continues to drive our approach to education today.
+                Our founders&apos; vision was to create a learning environment where every student could thrive, regardless of their starting point or learning style. This vision continues to drive our approach to education today.
               </p>
             </CardContent>
           </Card>
@@ -31,7 +31,7 @@ export default function OurStoryPage() {
             </CardHeader>
             <CardContent className="text-white/90">
               <p className="mb-4">
-                At Enrich Education, our mission is to empower students to reach their full potential through personalized learning experiences, expert guidance, and a supportive community. We believe that every student has the capacity to excel, and we are committed to providing the tools, knowledge, and encouragement they need to succeed.
+                At Enrich Education, our mission is to empower students to reach their full potential through personalized learning experiences, expert guidance, and a supportive community. We believe that every student has the capacity to excel, and we&apos;re committed to providing the tools, knowledge, and encouragement they need to succeed.
               </p>
               <p>
                 We strive to:
