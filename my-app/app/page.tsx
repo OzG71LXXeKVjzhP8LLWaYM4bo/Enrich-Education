@@ -1,9 +1,14 @@
-import React from 'react'
+import { Hero } from "@/components/ui/hero";
+import { Stats } from "@/components/ui/stats";
 
-const page = () => {
+
+export default function Home() {
   return (
-    <div>page</div>
+    <div className="min-h-screen bg-white">
+      <main>
+        <Hero />
+        <Stats />
+      </main>
+    </div>
   )
 }
-
-export default page
