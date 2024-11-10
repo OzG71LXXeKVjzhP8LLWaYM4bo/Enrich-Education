@@ -77,11 +77,11 @@ export function Header() {
                     COURSES
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[200px] p-2 gap-1">
+                    <ul className="grid w-[250px] p-2 gap-1">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/courses/mathematics"
+                            href="mathematics"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             Mathematics
@@ -91,7 +91,7 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/courses/english"
+                            href="english"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             English
@@ -101,10 +101,30 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/courses/sciences"
+                            href="holiday"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
-                            Sciences
+                            Holiday Courses
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="selective"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            Selective School Prep
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="oc"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            OC Prep
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -147,7 +167,7 @@ export function Header() {
               </NavigationMenuList>
             </NavigationMenu>
             <Link href="/contact">
-            <Button className="bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
+              <Button className="bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
             </Link>
           </nav>
           <button
