@@ -24,7 +24,7 @@ export function Stats() {
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/enrich-education-students-studying.JPG"
+          src="/enrichsittingoutside.JPG"
           alt="Students studying"
           fill
           className="object-cover brightness-50"
