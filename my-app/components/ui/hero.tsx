@@ -23,7 +23,7 @@ export function Hero() {
           Welcome
         </div>
         <p className="text-xl md:text-3xl mb-8 max-w-3xl mx-auto">
-          Achieve Your Academic Goals with Sydney&#39;s Premier Tutoring Service
+          Achieve Your Academic Goals with Sydney Premier Tutoring Service
         </p>
         <Button className="bg-yellow-500 text-white hover:bg-yellow-600 text-lg px-8 py-6">
           ENQUIRE NOW
