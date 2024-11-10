@@ -22,7 +22,7 @@ export function MapSection() {
           <div>
             <h3 className="font-bold text-gray-800 mb-4 text-2xl">Visit Us</h3>
             <p className="text-gray-600 mb-4">
-              We're conveniently located in the heart of Burwood. Drop by our center to learn more about our
+              We are conveniently located in the heart of Burwood. Drop by our center to learn more about our
               programs and meet our dedicated team of educators.
             </p>
             <div className="flex items-center text-gray-600">
