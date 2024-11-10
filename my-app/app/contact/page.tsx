@@ -1,9 +1,10 @@
-import { Contact } from '@/components/ui/contact'
+
+import ContactPage from '@/components/ui/contact'
 import React from 'react'
 
 const page = () => {
   return (
-    <div><Contact /></div>
+    <div><ContactPage /></div>
   )
 }
 

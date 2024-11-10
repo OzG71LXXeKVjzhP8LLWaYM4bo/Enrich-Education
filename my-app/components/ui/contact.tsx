@@ -1,13 +1,51 @@
+'use client'
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import Image from "next/image"
-import { Send } from "lucide-react"
+import { Send} from "lucide-react"
 
-export function Contact() {
+const subjectCategories = [
+  {
+    name: "Mathematics",
+    subjects: ["Mathematics"]
+  },
+  {
+    name: "English",
+    subjects: ["English"]
+  },
+  {
+    name: "IB Courses",
+    subjects: ["IB Mathematics SL", "IB Mathematics HL", "IB English SL", "IB English HL"]
+  },
+  {
+    name: "Preparation Courses",
+    subjects: ["Selective School Prep", "OC Prep"]
+  }
+]
+
+export default function ContactPage() {
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
+
+  const toggleSubject = (subject: string) => {
+    setSelectedSubjects(prev =>
+      prev.includes(subject)
+        ? prev.filter(s => s !== subject)
+        : [...prev, subject]
+    )
+  }
+
   return (
     <section className="relative min-h-screen">
       {/* Hero Background */}
@@ -24,10 +62,10 @@ export function Contact() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-          ENRICH EDUCATION SPECIALIST TUITION
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Enrich Education
         </h1>
-        <h2 className="text-6xl md:text-8xl font-bold text-white mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">
           Contact Us
         </h2>
 
@@ -131,43 +169,46 @@ export function Contact() {
                 <Label className="text-gray-700">
                   Current school year <span className="text-red-400">*</span>
                 </Label>
-                <RadioGroup defaultValue="year-10" className="flex gap-4 mt-1">
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="year-10" id="year-10" />
-                    <Label htmlFor="year-10" className="text-gray-700">Year 10</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="year-11" id="year-11" />
-                    <Label htmlFor="year-11" className="text-gray-700">Year 11</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="year-12" id="year-12" />
-                    <Label htmlFor="year-12" className="text-gray-700">Year 12</Label>
-                  </div>
+                <RadioGroup defaultValue="year-7" className="flex flex-wrap gap-4 mt-1">
+                  {["Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11", "Year 12"].map((year) => (
+                    <div key={year} className="flex items-center space-x-2">
+                      <RadioGroupItem value={year.toLowerCase().replace(/\s+/g, '-')} id={year.toLowerCase().replace(/\s+/g, '-')} />
+                      <Label htmlFor={year.toLowerCase().replace(/\s+/g, '-')} className="text-gray-700">{year}</Label>
+                    </div>
+                  ))}
                 </RadioGroup>
               </div>
 
               <div>
                 <Label className="text-gray-700">Subject interests</Label>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-1">
-                  {[
-                    "Chemistry",
-                    "Physics",
-                    "Biology",
-                    "Maths",
-                    "Economics",
-                    "UCAT",
-                    "Yr. 10 Science",
-                    "Yr. 10 Maths"
-                  ].map((subject) => (
-                    <div key={subject} className="flex items-center space-x-2">
-                      <Checkbox id={subject.toLowerCase()} />
-                      <Label htmlFor={subject.toLowerCase()} className="text-gray-700">
-                        {subject}
-                      </Label>
-                    </div>
+                <Accordion type="single" collapsible className="w-full">
+                  {subjectCategories.map((category, index) => (
+                    <AccordionItem value={`item-${index}`} key={index}>
+                      <AccordionTrigger className="text-gray-700">
+                        {category.name}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="space-y-2">
+                          {category.subjects.map((subject) => (
+                            <div key={subject} className="flex items-center space-x-2">
+                              <Checkbox
+                                id={subject.toLowerCase().replace(/\s+/g, '-')}
+                                checked={selectedSubjects.includes(subject)}
+                                onCheckedChange={() => toggleSubject(subject)}
+                              />
+                              <Label
+                                htmlFor={subject.toLowerCase().replace(/\s+/g, '-')}
+                                className="text-gray-700"
+                              >
+                                {subject}
+                              </Label>
+                            </div>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
                   ))}
-                </div>
+                </Accordion>
               </div>
 
               <div>
