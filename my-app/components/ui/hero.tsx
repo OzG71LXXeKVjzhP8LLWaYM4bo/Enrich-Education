@@ -1,10 +1,10 @@
-/*************  ✨ Codeium Command 🌟  *************/
 import Image from "next/image";
 import { Button } from "./button";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* This is the container for the background image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/enrich-education-students-studying.JPG"
@@ -12,12 +12,12 @@ export function Hero() {
           fill
           className="object-cover"
           priority
-          style={{ zIndex: -1 }} // Ensure the image stays below content
         />
+        {/* Gradient overlay on top of the image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/90 via-purple-500/90 to-blue-500/90 z-10" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-pink-500/90 via-purple-500/90 to-blue-500/90 z-1" />
 
-      <div className="relative z-10 container mx-auto px-4 text-white text-center">
+      <div className="relative z-20 container mx-auto px-4 text-white text-center">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           ENRICH EDUCATION SPECIALIST TUITION
         </h1>
@@ -31,7 +31,6 @@ export function Hero() {
           ENQUIRE NOW
         </Button>
       </div>
-/******  3d9e9dd2-4ccb-4f85-aca7-69b899f19aa4  *******/
     </section>
   );
 }
