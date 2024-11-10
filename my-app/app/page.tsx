@@ -1,5 +1,6 @@
 import { Hero } from "@/components/ui/hero";
 import { Stats } from "@/components/ui/stats";
+import { WhyChooseUs } from "@/components/ui/whychooseus";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <main>
         <Hero />
+        <WhyChooseUs />
         <Stats />
       </main>
     </div>
