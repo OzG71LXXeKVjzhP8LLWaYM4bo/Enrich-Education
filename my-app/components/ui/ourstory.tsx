@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -18,7 +18,7 @@ export default function OurStoryPage() {
                 Enrich Education was founded in 2010 by a group of passionate educators who saw the need for high-quality, personalized tutoring services in Burwood, Sydney. What started as a small tutoring center has grown into a comprehensive educational institution, serving hundreds of students across various subjects and grade levels.
               </p>
               <p>
-                Our founders' vision was to create a learning environment where every student could thrive, regardless of their starting point or learning style. This vision continues to drive our approach to education today.
+                Our founders vision was to create a learning environment where every student could thrive, regardless of their starting point or learning style. This vision continues to drive our approach to education today.
               </p>
             </CardContent>
           </Card>
