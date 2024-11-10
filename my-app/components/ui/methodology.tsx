@@ -35,7 +35,7 @@ export default function MethodologyPage() {
                 One of the cornerstones of our methodology is our strict homework policy. We believe that regular, meaningful practice is essential for mastering any subject. Our homework assignments are carefully designed to reinforce classroom learning, encourage independent thinking, and build crucial time management skills.
               </p>
               <p className="mb-4">
-                We expect all our students to complete their homework diligently and on time. This isn't just about academic performance; it's about instilling discipline, responsibility, and a strong work ethic that will serve them well beyond their academic years.
+                We expect all our students to complete their homework diligently and on time. This is not just about academic performance; it's about instilling discipline, responsibility, and a strong work ethic that will serve them well beyond their academic years.
               </p>
               <p>
                 Our teachers provide detailed feedback on homework, ensuring that students understand their mistakes and learn from them. We also involve parents in this process, keeping them informed about their child's progress and any areas that need additional attention.
