@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function Stats() {
   const stats = [
@@ -18,7 +18,7 @@ export function Stats() {
       value: "10",
       description: "Students achieved State Ranks in their ACE HSC subjects",
     },
-  ]
+  ];
 
   return (
     <section className="relative py-24 overflow-hidden">
@@ -36,7 +36,7 @@ export function Stats() {
         <h2 className="text-6xl font-bold text-white mb-8">RESULTS</h2>
         <p className="text-2xl text-white mb-16 max-w-4xl">
           Our students consistently excel in the HSC, achieving remarkable results across all subjects.
-          Here's a snapshot of what our HSC tutoring can help you achieve:
+          Here&#39;s a snapshot of what our HSC tutoring can help you achieve:
         </p>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -56,5 +56,5 @@ export function Stats() {
         </p>
       </div>
     </section>
-  )
+  );
 }
