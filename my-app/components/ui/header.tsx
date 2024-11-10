@@ -146,7 +146,9 @@ export function Header() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            <Link href="/contact">
             <Button className="bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
+            </Link>
           </nav>
           <button
             className="md:hidden p-2"
