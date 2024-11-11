@@ -91,7 +91,7 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/courses/oc"
+                            href="/courses/oc-prep"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             OC Prep
