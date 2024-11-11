@@ -9,9 +9,9 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <main>
         <Hero />
+        <Stats />
         <WhyChooseUs />
         <TestimonialSlider />
-        <Stats />
       </main>
     </div>
   )
