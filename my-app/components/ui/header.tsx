@@ -154,7 +154,7 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/timetables/term"
+                            href="/timetable"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             Term Timetable
@@ -164,7 +164,7 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/timetables/holiday"
+                            href="/timetable"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             Holiday Programs
