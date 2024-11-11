@@ -81,47 +81,17 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/mathematics"
+                            href="/courses/general"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
-                            Mathematics
+                            General Courses
                           </Link>
                         </NavigationMenuLink>
                       </li>
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/english"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            English
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/holiday"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Holiday Courses
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/selective"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Selective School Prep
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/oc"
+                            href="/courses/oc"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             OC Prep
@@ -131,10 +101,60 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/ib"
+                            href="/courses/selective-prep"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            Selective School Prep
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/courses/scholarship-prep"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            Scholarship Prep
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/courses/hsc"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            HSC Courses
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/courses/ib"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             IB Courses
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/courses/further-literacy"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            Further Literacy
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/courses/further-quantitative-reasoning"
+                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                          >
+                            Further Quantitative Reasoning
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -189,6 +209,158 @@ export function Header() {
           </button>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <nav className="flex flex-col space-y-2 p-4">
+            <Link
+              href="/"
+              className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              HOME
+            </Link>
+            <details className="group">
+              <summary className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50 cursor-pointer">
+                ABOUT
+              </summary>
+              <ul className="pl-8 mt-2 space-y-2">
+                <li>
+                  <Link
+                    href="/ourstory"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Our Story
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/methodology"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Methodology
+                  </Link>
+                </li>
+              </ul>
+            </details>
+            <Link
+              href="/teachers"
+              className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              TEACHERS
+            </Link>
+            <details className="group">
+              <summary className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50 cursor-pointer">
+                COURSES
+              </summary>
+              <ul className="pl-8 mt-2 space-y-2">
+                <li>
+                  <Link
+                    href="/courses/general"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    General Courses
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/oc"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    OC Prep
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/selective"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Selective School Prep
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/scholarship"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Scholarship Prep
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/hsc"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    HSC Courses
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/ib"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    IB Courses
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/further-literacy"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Further Literacy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/courses/further-quantitative-reasoning"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Further Quantitative Reasoning
+                  </Link>
+                </li>
+              </ul>
+            </details>
+            <details className="group">
+              <summary className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50 cursor-pointer">
+                TIMETABLES
+              </summary>
+              <ul className="pl-8 mt-2 space-y-2">
+                <li>
+                  <Link
+                    href="/timetable"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Term Timetable
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/timetable"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Holiday Programs
+                  </Link>
+                </li>
+              </ul>
+            </details>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
