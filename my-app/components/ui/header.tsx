@@ -267,7 +267,7 @@ export function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/courses/oc"
+                    href="/courses/oc-prep"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -276,7 +276,7 @@ export function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/courses/selective"
+                    href="/courses/selective-prep"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -285,7 +285,7 @@ export function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/courses/scholarship"
+                    href="/courses/scholarship-prep"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
