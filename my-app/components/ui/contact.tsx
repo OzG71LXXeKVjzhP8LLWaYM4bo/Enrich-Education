@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -18,25 +18,51 @@ import { Send } from "lucide-react"
 
 const subjectCategories = [
   {
-    name: "Mathematics",
-    subjects: ["Mathematics"]
+    name: "General Courses",
+    subjects: ["General Academic Support"],
+    grades: [7, 8, 9, 10]
   },
   {
-    name: "English",
-    subjects: ["English"]
+    name: "OC Prep",
+    subjects: ["OC Preparation"],
+    grades: [4, 5]
+  },
+  {
+    name: "Selective Prep",
+    subjects: ["Selective School Preparation"],
+    grades: [4, 5, 6]
+  },
+  {
+    name: "Scholarship Prep",
+    subjects: ["Scholarship Preparation"],
+    grades: [4, 5, 6]
+  },
+  {
+    name: "HSC Courses",
+    subjects: ["HSC English (Advanced)", "HSC Mathematics Advanced", "HSC Physics", "HSC Chemistry", "HSC Biology", "HSC Economics"],
+    grades: [11, 12]
   },
   {
     name: "IB Courses",
-    subjects: ["IB Mathematics SL", "IB Mathematics HL", "IB English SL", "IB English HL"]
+    subjects: ["IB English A: Language and Literature", "IB Mathematics: Analysis and Approaches", "IB Physics", "IB Chemistry", "IB Biology", "IB Economics"],
+    grades: [11, 12]
   },
   {
-    name: "Preparation Courses",
-    subjects: ["Selective School Prep", "OC Prep"]
+    name: "Further Literacy",
+    subjects: ["Further Literacy"],
+    grades: [4, 5, 6, 7, 8, 9, 10]
+  },
+  {
+    name: "Further Quantitative Reasoning",
+    subjects: ["Further Quantitative Reasoning"],
+    grades: [4, 5, 6, 7, 8, 9, 10]
   }
 ]
 
 export default function ContactPage() {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
+  const [selectedYear, setSelectedYear] = useState<number | null>(null)
+  const [filteredCategories, setFilteredCategories] = useState(subjectCategories)
 
   const toggleSubject = (subject: string) => {
     setSelectedSubjects(prev =>
@@ -45,6 +71,18 @@ export default function ContactPage() {
         : [...prev, subject]
     )
   }
+
+  useEffect(() => {
+    if (selectedYear) {
+      const filtered = subjectCategories.filter(category => 
+        category.grades.includes(selectedYear)
+      )
+      setFilteredCategories(filtered)
+      setSelectedSubjects([]) // Reset selected subjects when year changes
+    } else {
+      setFilteredCategories([])
+    }
+  }, [selectedYear])
 
   return (
     <section className="relative min-h-screen">
@@ -169,7 +207,11 @@ export default function ContactPage() {
                 <Label className="text-gray-700">
                   Current school year <span className="text-red-400">*</span>
                 </Label>
-                <RadioGroup defaultValue="year-7" className="flex flex-wrap gap-4 mt-1">
+                <RadioGroup 
+                  defaultValue="year-7" 
+                  className="flex flex-wrap gap-4 mt-1"
+                  onValueChange={(value) => setSelectedYear(parseInt(value.split('-')[1]))}
+                >
                   {["Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11", "Year 12"].map((year) => (
                     <div key={year} className="flex items-center space-x-2">
                       <RadioGroupItem value={year.toLowerCase().replace(/\s+/g, '-')} id={year.toLowerCase().replace(/\s+/g, '-')} />
@@ -179,37 +221,39 @@ export default function ContactPage() {
                 </RadioGroup>
               </div>
 
-              <div>
-                <Label className="text-gray-700">Subject interests</Label>
-                <Accordion type="single" collapsible className="w-full">
-                  {subjectCategories.map((category, index) => (
-                    <AccordionItem value={`item-${index}`} key={index}>
-                      <AccordionTrigger className="text-gray-700">
-                        {category.name}
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <div className="space-y-2">
-                          {category.subjects.map((subject) => (
-                            <div key={subject} className="flex items-center space-x-2">
-                              <Checkbox
-                                id={subject.toLowerCase().replace(/\s+/g, '-')}
-                                checked={selectedSubjects.includes(subject)}
-                                onCheckedChange={() => toggleSubject(subject)}
-                              />
-                              <Label
-                                htmlFor={subject.toLowerCase().replace(/\s+/g, '-')}
-                                className="text-gray-700"
-                              >
-                                {subject}
-                              </Label>
-                            </div>
-                          ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
+              {selectedYear && (
+                <div>
+                  <Label className="text-gray-700">Subject interests</Label>
+                  <Accordion type="single" collapsible className="w-full">
+                    {filteredCategories.map((category, index) => (
+                      <AccordionItem value={`item-${index}`} key={index}>
+                        <AccordionTrigger className="text-gray-700">
+                          {category.name}
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <div className="space-y-2">
+                            {category.subjects.map((subject) => (
+                              <div key={subject} className="flex items-center space-x-2">
+                                <Checkbox
+                                  id={subject.toLowerCase().replace(/\s+/g, '-')}
+                                  checked={selectedSubjects.includes(subject)}
+                                  onCheckedChange={() => toggleSubject(subject)}
+                                />
+                                <Label
+                                  htmlFor={subject.toLowerCase().replace(/\s+/g, '-')}
+                                  className="text-gray-700"
+                                >
+                                  {subject}
+                                </Label>
+                              </div>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              )}
 
               <div>
                 <Label className="text-gray-700">Message</Label>
