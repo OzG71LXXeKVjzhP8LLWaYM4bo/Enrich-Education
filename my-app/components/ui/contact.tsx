@@ -14,7 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from "next/image"
-import { Send} from "lucide-react"
+import { Send, ChevronDown } from "lucide-react"
 
 const subjectCategories = [
   {
