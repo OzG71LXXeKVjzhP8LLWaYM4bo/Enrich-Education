@@ -1,6 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const timetableData = [
   {
@@ -126,52 +125,43 @@ export default function TimetablePage() {
     <div className="min-h-screen bg-gradient-to-r from-pink-500/90 via-purple-500/90 to-blue-500/90 py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">Class Timetable</h1>
-        <Tabs defaultValue="foundations" className="space-y-8">
-          <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
-            {timetableData.map((category, index) => (
-              <TabsTrigger key={index} value={category.category.toLowerCase().replace(/\s+/g, '-')}>
-                {category.category}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        <div className="space-y-8">
           {timetableData.map((category, index) => (
-            <TabsContent key={index} value={category.category.toLowerCase().replace(/\s+/g, '-')}>
-              <Card className="bg-white/10 backdrop-blur-md border-white/20">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-white">{category.category}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead className="text-white">Year</TableHead>
-                        <TableHead className="text-white">Times</TableHead>
+            <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white">{category.category}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="text-white">Year</TableHead>
+                      <TableHead className="text-white">Times</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {category.classes.map((cls, clsIndex) => (
+                      <TableRow key={clsIndex}>
+                        <TableCell className="font-medium text-white">{cls.year}</TableCell>
+                        <TableCell className="text-white">
+                          {cls.times.length > 0 ? (
+                            <ul className="list-disc list-inside">
+                              {cls.times.map((time, timeIndex) => (
+                                <li key={timeIndex}>{time}</li>
+                              ))}
+                            </ul>
+                          ) : (
+                            "TBA"
+                          )}
+                        </TableCell>
                       </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {category.classes.map((cls, clsIndex) => (
-                        <TableRow key={clsIndex}>
-                          <TableCell className="font-medium text-white">{cls.year}</TableCell>
-                          <TableCell className="text-white">
-                            {cls.times.length > 0 ? (
-                              <ul className="list-disc list-inside">
-                                {cls.times.map((time, timeIndex) => (
-                                  <li key={timeIndex}>{time}</li>
-                                ))}
-                              </ul>
-                            ) : (
-                              "TBA"
-                            )}
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </CardContent>
-              </Card>
-            </TabsContent>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
           ))}
-        </Tabs>
+        </div>
       </div>
     </div>
   )
