@@ -15,78 +15,97 @@ type Course = {
   curriculum: string[]
 }
 
-const selectivePrepCourses: Course[] = [
+const generalCourses: Course[] = [
   {
-    id: "selective-year4",
-    title: "Selective School Preparation - Year 4",
-    description: "Early preparation course for the Selective High School Placement Test, focusing on building strong foundations in all test areas.",
-    subjects: ["English", "Mathematics", "General Ability", "Writing"],
-    level: "Year 4",
+    id: "general-year7",
+    title: "General Academic Support - Year 7",
+    description: "Comprehensive academic support for Year 7 students, focusing on building strong foundations in core subjects and adapting to high school curriculum.",
+    subjects: ["English", "Mathematics", "Science", "Study Skills"],
+    level: "Year 7",
     duration: "10 weeks per term",
     price: 900,
     curriculum: [
-      "Reading comprehension strategies",
-      "Vocabulary development",
-      "Basic mathematical operations and problem-solving",
-      "Introduction to general ability questions",
-      "Persuasive and creative writing techniques",
-      "Time management skills",
-      "Test-taking strategies",
-      "Critical thinking exercises"
+      "Advanced reading comprehension and analysis",
+      "Essay writing and text types",
+      "Algebra and geometry foundations",
+      "Scientific method and basic experiments",
+      "Study skills and time management",
+      "Critical thinking and problem-solving",
+      "Research and presentation skills",
+      "Exam preparation techniques"
     ]
   },
   {
-    id: "selective-year5",
-    title: "Selective School Preparation - Year 5",
-    description: "Comprehensive preparation course for Year 5 students, covering all components of the Selective High School Placement Test in depth.",
-    subjects: ["Advanced English", "Advanced Mathematics", "General Ability", "Writing"],
-    level: "Year 5",
+    id: "general-year8",
+    title: "General Academic Support - Year 8",
+    description: "Tailored academic support for Year 8 students, reinforcing core subject knowledge and developing advanced study techniques.",
+    subjects: ["English", "Mathematics", "Science", "History"],
+    level: "Year 8",
     duration: "10 weeks per term",
     price: 950,
     curriculum: [
-      "Advanced reading comprehension and analysis",
-      "Complex mathematical problem-solving",
-      "Extensive general ability practice",
-      "Advanced writing techniques for various genres",
-      "Mock tests and exam preparation",
-      "Logical reasoning and critical thinking",
-      "Speed and accuracy improvement strategies",
-      "Interview skills (if applicable)"
+      "Advanced literary analysis and interpretation",
+      "Persuasive and analytical writing",
+      "Algebra, geometry, and data analysis",
+      "Physics and chemistry foundations",
+      "Historical inquiry and source analysis",
+      "Advanced research methods",
+      "Public speaking and debating skills",
+      "Exam strategies and time management"
     ]
   },
   {
-    id: "selective-year6",
-    title: "Selective School Preparation - Year 6",
-    description: "Intensive final preparation course for Year 6 students, focusing on exam techniques, time management, and confidence building.",
-    subjects: ["English Mastery", "Mathematics Mastery", "General Ability Mastery", "Writing Mastery"],
-    level: "Year 6",
+    id: "general-year9",
+    title: "General Academic Support - Year 9",
+    description: "Comprehensive academic program for Year 9 students, focusing on deepening subject knowledge and preparing for senior years of high school.",
+    subjects: ["English", "Mathematics", "Science", "Geography"],
+    level: "Year 9",
     duration: "10 weeks per term",
     price: 1000,
     curriculum: [
-      "Advanced text analysis and interpretation",
-      "High-level mathematical concepts and applications",
-      "Mastery of general ability question types",
-      "Refined writing skills for maximum impact",
-      "Intensive mock testing and feedback",
-      "Advanced time management techniques",
-      "Stress management and exam psychology",
-      "Final preparation strategies and tips"
+      "Complex text analysis and interpretation",
+      "Advanced essay writing and creative writing",
+      "Trigonometry and advanced algebra",
+      "Biology and environmental science",
+      "Geographical skills and fieldwork techniques",
+      "Critical and creative thinking",
+      "Advanced study skills and note-taking",
+      "Preparation for school assessments and exams"
+    ]
+  },
+  {
+    id: "general-year10",
+    title: "General Academic Support - Year 10",
+    description: "Intensive academic support for Year 10 students, focusing on consolidating knowledge, preparing for senior subjects, and developing advanced academic skills.",
+    subjects: ["English", "Mathematics", "Science", "Career Planning"],
+    level: "Year 10",
+    duration: "10 weeks per term",
+    price: 1050,
+    curriculum: [
+      "Advanced literary and media analysis",
+      "Complex essay writing and argumentation",
+      "Functions, calculus foundations, and statistics",
+      "Physics, chemistry, and biology integration",
+      "Career exploration and subject selection guidance",
+      "Research project management",
+      "Advanced analytical and critical thinking skills",
+      "Exam mastery and stress management techniques"
     ]
   }
 ]
 
-export default function SelectivePrepCoursesPage() {
+export default function GeneralCoursesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500/90 via-purple-500/90 to-pink-500/90">
       <main className="container mx-auto px-4 py-16 pt-24">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          Selective School Preparation Courses
+          General Academic Support Courses
         </h1>
         <p className="text-xl text-center mb-16 max-w-3xl mx-auto text-white/90">
-          Enrich Education offers comprehensive Selective School preparation courses designed to give students the best chance of success in the Selective High School Placement Test. Our programs cater to students from Year 4 to Year 6, providing targeted preparation and support.
+          Enrich Education offers comprehensive General Academic Support courses designed to help students in Years 7-10 excel in their studies. Our programs provide targeted support across core subjects, develop essential academic skills, and prepare students for the challenges of senior high school.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
-          {selectivePrepCourses.map((course) => (
+          {generalCourses.map((course) => (
             <Card key={course.id} className="bg-white/10 backdrop-blur-md border-white/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-white">{course.title}</CardTitle>

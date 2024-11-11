@@ -15,78 +15,78 @@ type Course = {
   curriculum: string[]
 }
 
-const selectivePrepCourses: Course[] = [
+const scholarshipPrepCourses: Course[] = [
   {
-    id: "selective-year4",
-    title: "Selective School Preparation - Year 4",
-    description: "Early preparation course for the Selective High School Placement Test, focusing on building strong foundations in all test areas.",
+    id: "scholarship-year4",
+    title: "Scholarship Preparation - Year 4",
+    description: "Early preparation course for students aiming to secure scholarships for entry into private schools, focusing on building strong foundations across all key subject areas.",
     subjects: ["English", "Mathematics", "General Ability", "Writing"],
     level: "Year 4",
     duration: "10 weeks per term",
-    price: 900,
-    curriculum: [
-      "Reading comprehension strategies",
-      "Vocabulary development",
-      "Basic mathematical operations and problem-solving",
-      "Introduction to general ability questions",
-      "Persuasive and creative writing techniques",
-      "Time management skills",
-      "Test-taking strategies",
-      "Critical thinking exercises"
-    ]
-  },
-  {
-    id: "selective-year5",
-    title: "Selective School Preparation - Year 5",
-    description: "Comprehensive preparation course for Year 5 students, covering all components of the Selective High School Placement Test in depth.",
-    subjects: ["Advanced English", "Advanced Mathematics", "General Ability", "Writing"],
-    level: "Year 5",
-    duration: "10 weeks per term",
     price: 950,
     curriculum: [
-      "Advanced reading comprehension and analysis",
-      "Complex mathematical problem-solving",
-      "Extensive general ability practice",
-      "Advanced writing techniques for various genres",
-      "Mock tests and exam preparation",
-      "Logical reasoning and critical thinking",
-      "Speed and accuracy improvement strategies",
-      "Interview skills (if applicable)"
+      "Advanced reading comprehension strategies",
+      "Creative and analytical writing techniques",
+      "Problem-solving in mathematics",
+      "Critical thinking and logical reasoning",
+      "General knowledge and current affairs",
+      "Time management and exam techniques",
+      "Public speaking and presentation skills",
+      "Interview preparation (if applicable)"
     ]
   },
   {
-    id: "selective-year6",
-    title: "Selective School Preparation - Year 6",
-    description: "Intensive final preparation course for Year 6 students, focusing on exam techniques, time management, and confidence building.",
-    subjects: ["English Mastery", "Mathematics Mastery", "General Ability Mastery", "Writing Mastery"],
-    level: "Year 6",
+    id: "scholarship-year5",
+    title: "Scholarship Preparation - Year 5",
+    description: "Comprehensive scholarship preparation course for Year 5 students, covering all aspects of scholarship exams for private school entry.",
+    subjects: ["Advanced English", "Advanced Mathematics", "General Ability", "Writing", "Interview Skills"],
+    level: "Year 5",
     duration: "10 weeks per term",
     price: 1000,
     curriculum: [
-      "Advanced text analysis and interpretation",
-      "High-level mathematical concepts and applications",
-      "Mastery of general ability question types",
-      "Refined writing skills for maximum impact",
-      "Intensive mock testing and feedback",
-      "Advanced time management techniques",
-      "Stress management and exam psychology",
-      "Final preparation strategies and tips"
+      "In-depth literary analysis and interpretation",
+      "Advanced mathematical concepts and problem-solving",
+      "Extensive general ability and IQ-style questions practice",
+      "Persuasive and creative writing mastery",
+      "Critical thinking and analytical skills development",
+      "Mock tests and personalized feedback",
+      "Interview skills and confidence building",
+      "Scholarship application guidance"
+    ]
+  },
+  {
+    id: "scholarship-year6",
+    title: "Scholarship Preparation - Year 6",
+    description: "Intensive final preparation course for Year 6 students applying for scholarships, focusing on exam techniques, time management, and building confidence across all test areas.",
+    subjects: ["English Mastery", "Mathematics Mastery", "General Ability Mastery", "Writing Mastery", "Interview Mastery"],
+    level: "Year 6",
+    duration: "10 weeks per term",
+    price: 1050,
+    curriculum: [
+      "Advanced text analysis and critical essay writing",
+      "High-level mathematical reasoning and problem-solving",
+      "Mastery of various general ability question types",
+      "Refined writing skills for maximum impact in limited time",
+      "Intensive mock testing with detailed analysis and feedback",
+      "Advanced time management and stress control techniques",
+      "In-depth interview preparation and practice",
+      "Final preparation strategies and exam day tips"
     ]
   }
 ]
 
-export default function SelectivePrepCoursesPage() {
+export default function ScholarshipPrepCoursesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500/90 via-purple-500/90 to-pink-500/90">
       <main className="container mx-auto px-4 py-16 pt-24">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          Selective School Preparation Courses
+          Scholarship Preparation Courses
         </h1>
         <p className="text-xl text-center mb-16 max-w-3xl mx-auto text-white/90">
-          Enrich Education offers comprehensive Selective School preparation courses designed to give students the best chance of success in the Selective High School Placement Test. Our programs cater to students from Year 4 to Year 6, providing targeted preparation and support.
+          Enrich Education offers specialized Scholarship Preparation courses designed to help students excel in competitive scholarship exams for entry into prestigious private schools. Our comprehensive programs cater to students from Year 4 to Year 6, providing targeted preparation and support to maximize their chances of success.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
-          {selectivePrepCourses.map((course) => (
+          {scholarshipPrepCourses.map((course) => (
             <Card key={course.id} className="bg-white/10 backdrop-blur-md border-white/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-white">{course.title}</CardTitle>
