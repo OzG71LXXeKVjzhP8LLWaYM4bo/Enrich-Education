@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const schools = [
-  { name: 'Ruse', logo: '/Ruse.png?height=80&width=80' },
+  { name: 'James Ruse', logo: '/Ruse.png?height=80&width=80' },
   { name: 'North Sydney Boys', logo: '/NSBH_Shield_new_colours.png?height=80&width=80' },
   { name: 'Sydney Grammar', logo: '/sydgrammar.png?height=80&width=80' },
   { name: 'Sydney Boys', logo: '/sydney-boys-hs-logo.png?height=80&width=80' },
@@ -23,6 +23,7 @@ const schools = [
   { name: 'Westbourne', logo: '/Westbourne-College-Sydney-logo-1.png?height=80&width=80' },
   { name: 'Southport', logo: '/SouthportSchool.png?height=80&width=80' },
   { name: 'kincoppall', logo: '/Kincoppal Rose Bay.png?height=80&width=80' },
+  { name: "Haileybury", logo: '/Haileybury_au_crest.svg.png?height=80&width=80' },
 ]
 
 const StudentsRanking = () => {
