@@ -75,13 +75,13 @@ const TestimonialSlider = () => {
             className="flex transition-transform duration-100 ease-linear"
             style={{ transform: `translateX(${position}%)` }}
           >
-            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
-              <div key={`${testimonial.id}-${index}`} className="w-64 flex-shrink-0 px-2">
+            {Array.from({ length: 100 }).map((_, index) => (
+              <div key={index} className="w-64 flex-shrink-0 px-2">
                 <Card className="bg-[#F0F4F8] overflow-hidden h-full">
                   <div className="aspect-square relative">
                     <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
+                      src={testimonials[index % testimonials.length].image}
+                      alt={testimonials[index % testimonials.length].name}
                       layout="fill"
                       objectFit="cover"
                       className="rounded-t-lg"
@@ -89,25 +89,25 @@ const TestimonialSlider = () => {
                   </div>
                   <CardContent className="p-4">
                     <Badge className="bg-yellow-500 text-white mb-2 text-xs hover:bg-yellow-600">
-                      {testimonial.subject}
+                      {testimonials[index % testimonials.length].subject}
                     </Badge>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{testimonial.name}</h3>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{testimonials[index % testimonials.length].name}</h3>
                     <div className="space-y-1 text-sm">
                       <div className="flex items-center gap-1">
                         <ArrowRight className="w-3 h-3 text-gray-600 flex-shrink-0" />
-                        <p className="text-gray-700">ATAR: {testimonial.atar}</p>
+                        <p className="text-gray-700">ATAR: {testimonials[index % testimonials.length].atar}</p>
                       </div>
                       <div className="flex items-start gap-1">
                         <ArrowRight className="w-3 h-3 text-gray-600 flex-shrink-0 mt-1" />
-                        <p className="text-gray-700 line-clamp-2">{testimonial.achievements}</p>
+                        <p className="text-gray-700 line-clamp-2">{testimonials[index % testimonials.length].achievements}</p>
                       </div>
                       <div className="flex items-center gap-1">
                         <ArrowRight className="w-3 h-3 text-gray-600 flex-shrink-0" />
-                        <p className="text-gray-700">{testimonial.graduated}</p>
+                        <p className="text-gray-700">{testimonials[index % testimonials.length].graduated}</p>
                       </div>
                       <div className="flex items-start gap-1">
                         <ArrowRight className="w-3 h-3 text-gray-600 flex-shrink-0 mt-1" />
-                        <p className="text-gray-700 line-clamp-2">{testimonial.degree}</p>
+                        <p className="text-gray-700 line-clamp-2">{testimonials[index % testimonials.length].degree}</p>
                       </div>
                     </div>
                   </CardContent>
