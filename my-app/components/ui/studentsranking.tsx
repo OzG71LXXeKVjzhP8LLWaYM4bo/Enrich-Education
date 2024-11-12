@@ -31,11 +31,17 @@ const StudentsRanking = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPosition((prevPosition) => (prevPosition - 0.5) % (schools.length * 100))
+      setPosition((prevPosition) => prevPosition - 0.5)
     }, 50)
 
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    if (position < -100 * schools.length) {
+      setPosition(0)
+    }
+  }, [position])
 
   return (
     <div className="bg-gray-100 py-16">
@@ -48,7 +54,7 @@ const StudentsRanking = () => {
             className="flex transition-transform duration-100 ease-linear"
             style={{ transform: `translateX(${position}%)` }}
           >
-            {schools.concat(schools).map((school, index) => (
+            {[...schools, ...schools, ...schools].map((school, index) => (
               <div key={`${school.name}-${index}`} className="flex-shrink-0 mx-4">
                 <div className="bg-white p-4 rounded-lg shadow-md w-40 h-40 flex flex-col items-center justify-center">
                   <Image
