@@ -19,6 +19,16 @@ const testimonials = [
   },
   {
     id: 2,
+    name: 'Jay Patel',
+    image: '/placeholder.svg?height=200&width=200',
+    subject: 'Chemistry',
+    atar: '99.90',
+    achievements: '7th in Chemistry (NSW)',
+    graduated: '2018 Sydney Boys',
+    degree: 'UNSW Bachelor of Medical Studies/Doctor of Medicine'
+  },
+  {
+    id: 3,
     name: 'Justin Wu',
     image: '/placeholder.svg?height=200&width=200',
     subject: 'Chemistry',
@@ -28,7 +38,7 @@ const testimonials = [
     degree: 'USYD Bachelor of Science (Adv)/Doctor of Medicine'
   },
   {
-    id: 3,
+    id: 4,
     name: 'Sarah Chen',
     image: '/placeholder.svg?height=200&width=200',
     subject: 'Mathematics',
@@ -36,16 +46,6 @@ const testimonials = [
     achievements: '3rd in Mathematics Extension 2 (NSW)',
     graduated: '2017 North Sydney Girls',
     degree: 'USYD Bachelor of Engineering (Honours)/Commerce'
-  },
-  {
-    id: 4,
-    name: 'Michael Zhang',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Physics',
-    atar: '99.95',
-    achievements: 'Dux, 5th in Physics (NSW), 12th in Chemistry (NSW)',
-    graduated: '2018 James Ruse',
-    degree: 'UNSW Bachelor of Engineering (Honours)/Science'
   }
 ]
 
@@ -54,11 +54,17 @@ const TestimonialSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPosition((prevPosition) => (prevPosition - 0.5) % (testimonials.length * 100))
+      setPosition((prevPosition) => prevPosition - 0.5)
     }, 50)
 
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    if (position < -100 * testimonials.length) {
+      setPosition(0)
+    }
+  }, [position])
 
   return (
     <div className="relative z-10 bg-gradient-to-r from-blue-500 to-purple-600 py-16 overflow-hidden">
