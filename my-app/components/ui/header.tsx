@@ -33,7 +33,7 @@ export function Header() {
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
+                <NavigationMenuItem key="about">
                   <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600">
                     ABOUT
                   </NavigationMenuTrigger>
@@ -72,7 +72,7 @@ export function Header() {
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
+                <NavigationMenuItem key="courses">
                   <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600">
                     COURSES
                   </NavigationMenuTrigger>
@@ -91,7 +91,7 @@ export function Header() {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
-                            href="/courses/oc-prep"
+                            href="/courses/oc"
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             OC Prep
@@ -155,39 +155,6 @@ export function Header() {
                             className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                           >
                             Further Quantitative Reasoning
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600">
-                    TIMETABLES
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[200px] p-2 gap-1">
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/timetable"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Term Timetable
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/timetable"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Holiday Programs
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -267,7 +234,7 @@ export function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/courses/oc-prep"
+                    href="/courses/oc"
                     className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -326,31 +293,6 @@ export function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Further Quantitative Reasoning
-                  </Link>
-                </li>
-              </ul>
-            </details>
-            <details className="group">
-              <summary className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50 cursor-pointer">
-                TIMETABLES
-              </summary>
-              <ul className="pl-8 mt-2 space-y-2">
-                <li>
-                  <Link
-                    href="/timetable"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Term Timetable
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/timetable"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Holiday Programs
                   </Link>
                 </li>
               </ul>
