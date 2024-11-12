@@ -1,5 +1,6 @@
 import { Hero } from "@/components/ui/hero";
 import { Stats } from "@/components/ui/stats";
+import StudentsRanking from "@/components/ui/studentsranking";
 import TestimonialSlider from "@/components/ui/testimonials";
 import { WhyChooseUs } from "@/components/ui/whychooseus";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <WhyChooseUs />
+        <StudentsRanking />
         <TestimonialSlider />
       </main>
     </div>
