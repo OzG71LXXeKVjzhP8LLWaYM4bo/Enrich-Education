@@ -27,7 +27,7 @@ export function Header() {
 
   const courseItems = [
     { href: "/courses/general", label: "General Courses" },
-    { href: "/courses/oc", label: "OC Prep" },
+    { href: "/courses/oc-prep", label: "OC Prep" },
     { href: "/courses/selective-prep", label: "Selective School Prep" },
     { href: "/courses/scholarship-prep", label: "Scholarship Prep" },
     { href: "/courses/hsc", label: "HSC Courses" },
