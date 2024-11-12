@@ -10,7 +10,7 @@ const testimonials = [
   {
     id: 1,
     name: 'Gavin Liu',
-    image: '/placeholder.svg?height=200&width=200',
+    image: '/gavin.png?height=200&width=200',
     subject: 'Mandarin',
     atar: '99.90',
     achievements: '1st in Mandarin (QLD)',
@@ -54,7 +54,7 @@ const TestimonialSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPosition((prevPosition) => (prevPosition - 1) % (testimonials.length * 100))
+      setPosition((prevPosition) => (prevPosition - 0.5) % (testimonials.length * 100))
     }, 50)
 
     return () => clearInterval(interval)
@@ -69,7 +69,7 @@ const TestimonialSlider = () => {
             className="flex transition-transform duration-100 ease-linear"
             style={{ transform: `translateX(${position}%)` }}
           >
-            {testimonials.concat(testimonials).map((testimonial, index) => (
+            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
               <div key={`${testimonial.id}-${index}`} className="w-64 flex-shrink-0 px-2">
                 <Card className="bg-[#F0F4F8] overflow-hidden h-full">
                   <div className="aspect-square relative">
