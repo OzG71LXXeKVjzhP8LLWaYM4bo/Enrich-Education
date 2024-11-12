@@ -11,7 +11,7 @@ const schools = [
   { name: 'Sydney Girls', logo: '/sydgirls.png?height=80&width=80' },
   { name: 'Baulkham Hills', logo: '/BHHSLogo.png?height=80&width=80' },
   { name: 'Fort Street', logo: '/fort street.png?height=80&width=80' },
-  { name: 'Ascham', logo: ' /ascham.png?height=80&width=80' },
+  { name: 'Ascham', logo: '/ascham.png?height=80&width=80' },
   { name: 'Cranbrook', logo: '/Cranbrook_School,_Sydney_Logo.svg.png?height=80&width=80' },
   { name: 'Newington', logo: '/Newington.png?height=80&width=80' },
   { name: 'Trinity (Summer Hill)', logo: '/trinity.png?height=80&width=80' },
