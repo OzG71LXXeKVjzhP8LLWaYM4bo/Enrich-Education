@@ -13,7 +13,7 @@ const schools = [
   { name: 'Fort Street', logo: '/fort street.png?height=80&width=80' },
   { name: 'Ascham', logo: '/ascham.png?height=80&width=80' },
   { name: 'Cranbrook', logo: '/Cranbrook_School,_Sydney_Logo.svg.png?height=80&width=80' },
-  { name: 'Newington', logo: '/Newington.png?height=80&width=80' },
+  { name: 'Newington', logo: '/Newingtonlogo.png?height=80&width=80' },
   { name: 'Trinity', logo: '/trinity.png?height=80&width=80' },
   { name: 'Loreto Kirribilli', logo: '/Loretokirribilli.png?height=80&width=80' },
   { name: 'MLC', logo: '/MLC.png?height=80&width=80' },
@@ -21,6 +21,8 @@ const schools = [
   { name: 'Scots', logo: '/scots.png?height=80&width=80' },
   { name: 'Shore', logo: '/shore.png?height=80&width=80' },
   { name: 'Westbourne', logo: '/Westbourne-College-Sydney-logo-1.png?height=80&width=80' },
+  { name: 'Southport', logo: '/SouthportSchool.png?height=80&width=80' },
+  { name: 'kincoppall', logo: 'Kincoppal Rose Bay.png?height=80&width=80' },
 ]
 
 const StudentsRanking = () => {
