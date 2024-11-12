@@ -1,6 +1,7 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const timetableData = [
   {
@@ -105,7 +106,7 @@ export default function TimetablePage() {
                   <TableHeader>
                     <TableRow>
                       <TableHead className="text-white">Year</TableHead>
-                      <TableHead className="text-white">Action</TableHead>
+                      <TableHead className="text-white">Time</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -113,9 +114,11 @@ export default function TimetablePage() {
                       <TableRow key={clsIndex}>
                         <TableCell className="font-medium text-white">{cls.year}</TableCell>
                         <TableCell>
-                          <Button variant="secondary" className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                            Claim your free trial
-                          </Button>
+                          <Link href="/contact" passHref>
+                            <Button variant="secondary" className="bg-yellow-500 hover:bg-yellow-600 text-white w-full">
+                              Claim your free trial
+                            </Button>
+                          </Link>
                         </TableCell>
                       </TableRow>
                     ))}
