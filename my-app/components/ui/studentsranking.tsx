@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const schools = [
-  { name: 'Ruse', logo: '/placeholder.svg?height=80&width=80' },
-  { name: 'North Sydney Boys', logo: '/placeholder.svg?height=80&width=80' },
-  { name: 'Sydney Grammar', logo: '/placeholder.svg?height=80&width=80' },
-  { name: 'Sydney Boys', logo: '/placeholder.svg?height=80&width=80' },
-  { name: 'Sydney Girls', logo: '/placeholder.svg?height=80&width=80' },
-  { name: 'Baulkham Hills', logo: '/placeholder.svg?height=80&width=80' },
+  { name: 'Ruse', logo: '/ruse.png?height=80&width=80' },
+  { name: 'North Sydney Boys', logo: '/my-app/public/NSBH_Shield_new_colours.png?height=80&width=80' },
+  { name: 'Sydney Grammar', logo: '/my-app/public/sghs-logo260x300.png?height=80&width=80' },
+  { name: 'Sydney Boys', logo: '/my-app/public/sydney-boys-hs-logo.png?height=80&width=80' },
+  { name: 'Sydney Girls', logo: '/my-app/public/sydgirls.png?height=80&width=80' },
+  { name: 'Baulkham Hills', logo: '/my-app/public/BHHSLogo.png?height=80&width=80' },
   { name: 'Fort Street', logo: '/placeholder.svg?height=80&width=80' },
   { name: 'International Grammar', logo: '/placeholder.svg?height=80&width=80' },
   { name: 'Ascham', logo: '/placeholder.svg?height=80&width=80' },
