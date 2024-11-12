@@ -6,7 +6,7 @@ import Image from 'next/image'
 const schools = [
   { name: 'Ruse', logo: '/ruse.png?height=80&width=80' },
   { name: 'North Sydney Boys', logo: '/NSBH_Shield_new_colours.png?height=80&width=80' },
-  { name: 'Sydney Grammar', logo: '/sghs-logo260x300.png?height=80&width=80' },
+  { name: 'Sydney Grammar', logo: '/sydgrammar.png.png?height=80&width=80' },
   { name: 'Sydney Boys', logo: '/sydney-boys-hs-logo.png?height=80&width=80' },
   { name: 'Sydney Girls', logo: '/sydgirls.png?height=80&width=80' },
   { name: 'Baulkham Hills', logo: '/BHHSLogo.png?height=80&width=80' },
