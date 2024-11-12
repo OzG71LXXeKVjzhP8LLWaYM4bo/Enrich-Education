@@ -21,8 +21,8 @@ const schools = [
   { name: 'Scots', logo: '/scots.png?height=80&width=80' },
   { name: 'Shore', logo: '/shore.png?height=80&width=80' },
   { name: 'Westbourne', logo: '/Westbourne-College-Sydney-logo-1.png?height=80&width=80' },
-  { name: 'Southport', logo: '/SouthportSchool.png?height=80&width=80' },
-  { name: 'kincoppall', logo: '/Kincoppal Rose Bay.png?height=80&width=80' },
+  { name: 'TSS-Southport', logo: '/SouthportSchool.png?height=80&width=80' },
+  { name: 'Kincoppall Rose-Bay', logo: '/Kincoppal Rose Bay.png?height=80&width=80' },
   { name: "Haileybury", logo: '/Haileybury_au_crest.svg.png?height=80&width=80' },
 ]
 
