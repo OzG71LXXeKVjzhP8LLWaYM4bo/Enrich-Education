@@ -15,7 +15,6 @@ import { GraduationCap, Menu} from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const menuItems = [
     { href: "/", label: "HOME" },
