@@ -1,4 +1,4 @@
-import TimetablePage from '@/components/ui/timetable'
+import TimetablePage from '@/components/ui/timetabledraft'
 import React from 'react'
 
 const page = () => {
