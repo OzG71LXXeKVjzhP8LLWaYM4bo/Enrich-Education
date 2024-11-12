@@ -1,4 +1,3 @@
-'use client'
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -10,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { GraduationCap, Menu} from "lucide-react"
+import { GraduationCap, Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Header() {
@@ -19,7 +18,6 @@ export function Header() {
     { href: "/", label: "HOME" },
     { href: "/testimonials", label: "TESTIMONIALS" },
     { href: "/teachers", label: "TEACHERS" },
-    { href: "/contact", label: "CONTACT" },
   ]
 
   const aboutItems = [
@@ -102,6 +100,9 @@ export function Header() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            <Link href="/contact">
+              <Button className="bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
+            </Link>
           </nav>
           <Sheet>
             <SheetTrigger asChild>
@@ -155,6 +156,9 @@ export function Header() {
                     ))}
                   </ul>
                 </details>
+                <Link href="/contact" className="mt-4">
+                  <Button className="w-full bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
