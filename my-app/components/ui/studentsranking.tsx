@@ -14,7 +14,7 @@ const schools = [
   { name: 'Ascham', logo: '/ascham.png?height=80&width=80' },
   { name: 'Cranbrook', logo: '/Cranbrook_School,_Sydney_Logo.svg.png?height=80&width=80' },
   { name: 'Newington', logo: '/Newington.png?height=80&width=80' },
-  { name: 'Trinity (Summer Hill)', logo: '/trinity.png?height=80&width=80' },
+  { name: 'Trinity', logo: '/trinity.png?height=80&width=80' },
   { name: 'Loreto Kirribilli', logo: '/Loretokirribilli.png?height=80&width=80' },
   { name: 'MLC', logo: '/MLC.png?height=80&width=80' },
   { name: 'Meriden', logo: '/MeridenCrest.png?height=80&width=80' },
