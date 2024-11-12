@@ -11,10 +11,34 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { ChevronDown, GraduationCap } from "lucide-react"
+import { ChevronDown, GraduationCap, Menu, X } from "lucide-react"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const menuItems = [
+    { href: "/", label: "HOME" },
+    { href: "/testimonials", label: "TESTIMONIALS" },
+    { href: "/teachers", label: "TEACHERS" },
+    { href: "/contact", label: "CONTACT" },
+  ]
+
+  const aboutItems = [
+    { href: "/ourstory", label: "Our Story" },
+    { href: "/methodology", label: "Methodology" },
+  ]
+
+  const courseItems = [
+    { href: "/courses/general", label: "General Courses" },
+    { href: "/courses/oc", label: "OC Prep" },
+    { href: "/courses/selective-prep", label: "Selective School Prep" },
+    { href: "/courses/scholarship-prep", label: "Scholarship Prep" },
+    { href: "/courses/hsc", label: "HSC Courses" },
+    { href: "/courses/ib", label: "IB Courses" },
+    { href: "/courses/further-literacy", label: "Further Literacy" },
+    { href: "/courses/further-quantitative-reasoning", label: "Further Quantitative Reasoning" },
+  ]
 
   return (
     <header className="fixed w-full bg-white/95 backdrop-blur-sm z-50">
@@ -24,285 +48,120 @@ export function Header() {
             <GraduationCap className="h-8 w-8 text-blue-600" />
             <span className="text-2xl font-bold text-blue-600">Enrich Education</span>
           </Link>
-          <nav className="hidden md:flex items-center space-x-1">
-            <Link
-              href="/"
-              className="px-4 py-2 text-sm font-medium text-blue-600 rounded-md hover:bg-blue-50"
-            >
-              HOME
-            </Link>
+          <nav className="hidden lg:flex items-center space-x-1">
+            {menuItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-blue-600"
+              >
+                {item.label}
+              </Link>
+            ))}
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem key="about">
+                <NavigationMenuItem>
                   <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600">
                     ABOUT
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[200px] p-2 gap-1">
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/ourstory"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Our Story
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/methodology"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Methodology
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
+                      {aboutItems.map((item) => (
+                        <li key={item.href}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={item.href}
+                              className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                            >
+                              {item.label}
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <Link
-              href="/teachers"
-              className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-blue-600"
-            >
-              TEACHERS
-            </Link>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem key="courses">
+                <NavigationMenuItem>
                   <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600">
                     COURSES
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[280px] p-2 gap-1">
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/general"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            General Courses
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/oc"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            OC Prep
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/selective-prep"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Selective School Prep
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/scholarship-prep"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Scholarship Prep
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/hsc"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            HSC Courses
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/ib"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            IB Courses
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/further-literacy"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Further Literacy
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href="/courses/further-quantitative-reasoning"
-                            className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                          >
-                            Further Quantitative Reasoning
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
+                      {courseItems.map((item) => (
+                        <li key={item.href}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={item.href}
+                              className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
+                            >
+                              {item.label}
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/contact">
-              <Button className="bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
-            </Link>
           </nav>
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <ChevronDown className="h-6 w-6" />
-          </button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="lg:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-4">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-lg font-medium text-gray-600 hover:text-blue-600"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <details className="group">
+                  <summary className="text-lg font-medium text-gray-600 hover:text-blue-600 cursor-pointer">
+                    ABOUT
+                  </summary>
+                  <ul className="mt-2 space-y-2 pl-4">
+                    {aboutItems.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="text-gray-600 hover:text-blue-600"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+                <details className="group">
+                  <summary className="text-lg font-medium text-gray-600 hover:text-blue-600 cursor-pointer">
+                    COURSES
+                  </summary>
+                  <ul className="mt-2 space-y-2 pl-4">
+                    {courseItems.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="text-gray-600 hover:text-blue-600"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <nav className="flex flex-col space-y-2 p-4">
-            <Link
-              href="/"
-              className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              HOME
-            </Link>
-            <details className="group">
-              <summary className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50 cursor-pointer">
-                ABOUT
-              </summary>
-              <ul className="pl-8 mt-2 space-y-2">
-                <li>
-                  <Link
-                    href="/ourstory"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Our Story
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/methodology"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Methodology
-                  </Link>
-                </li>
-              </ul>
-            </details>
-            <Link
-              href="/teachers"
-              className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              TEACHERS
-            </Link>
-            <details className="group">
-              <summary className="px-4 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-blue-50 cursor-pointer">
-                COURSES
-              </summary>
-              <ul className="pl-8 mt-2 space-y-2">
-                <li>
-                  <Link
-                    href="/courses/general"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    General Courses
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/oc"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    OC Prep
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/selective-prep"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Selective School Prep
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/scholarship-prep"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Scholarship Prep
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/hsc"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    HSC Courses
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/ib"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    IB Courses
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/further-literacy"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Further Literacy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/courses/further-quantitative-reasoning"
-                    className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Further Quantitative Reasoning
-                  </Link>
-                </li>
-              </ul>
-            </details>
-            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-pink-500 text-white hover:bg-pink-600">CONTACT</Button>
-            </Link>
-          </nav>
-        </div>
-      )}
     </header>
   )
 }
