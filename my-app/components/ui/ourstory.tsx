@@ -15,9 +15,9 @@ export default function OurStoryPage() {
             <CardContent className="p-6 md:p-10">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
-                  <h2 className="text-3xl font-bold text-white mb-4">Empowering Minds Since 2005</h2>
+                  <h2 className="text-3xl font-bold text-white mb-4">Empowering Minds Since 2007</h2>
                   <p className="text-white/90 mb-4">
-                    Enrich Education was founded with a vision to provide exceptional educational support to students in Sydney. 
+                    Enrich Education was founded in Cabramatta with a vision to provide exceptional educational support to students in Sydney. 
                     Our journey began with a small group of dedicated educators and has grown into a thriving community of learners and mentors.
                   </p>
                   <p className="text-white/90">
@@ -70,12 +70,12 @@ export default function OurStoryPage() {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Journey</h2>
           <div className="space-y-8">
             {[
-              { year: 2005, event: "Enrich Education founded in Burwood" },
-              { year: 2010, event: "Expanded to offer HSC preparation courses" },
-              { year: 2015, event: "Launched online learning platform" },
-              { year: 2018, event: "Opened second campus in Strathfield" },
-              { year: 2020, event: "Introduced virtual classrooms during global pandemic" },
-              { year: 2023, event: "Celebrated helping over 10,000 students achieve their goals" },
+              { year: 2007, event: "Enrich Education founded in Cabramatta" },
+              { year: 2010, event: "Our first ever student to rank 1st in English at James Ruse" },
+              { year: 2015, event: "Launched a 24/7 communication channel to respond faster to students" },
+              { year: 2018, event: "5th student to achieve a 99.95 ATAR" },
+              { year: 2020, event: "Moved to Burwood" },
+              { year: 2023, event: "First ever student to receive a full scholarship to UNSW Health Degree without any conditional terms. Over 90% achieved entry into a Selective School. 8th student to achieve a 99.95 ATAR." },
             ].map((milestone, index) => (
               <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20">
                 <CardContent className="p-6 flex items-center">
