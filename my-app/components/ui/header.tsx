@@ -17,7 +17,6 @@ export function Header() {
   const menuItems = [
     { href: "/", label: "HOME" },
     { href: "/testimonials", label: "TESTIMONIALS" },
-    { href: "/teachers", label: "TEACHERS" },
   ]
 
   const aboutItems = [
