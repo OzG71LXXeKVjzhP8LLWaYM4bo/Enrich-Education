@@ -13,10 +13,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { toast } from "@/hooks/use-toast"
 import Image from "next/image"
 import { Send } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast"
-import { sendContactForm } from "@/app/actions"
 
 const subjectCategories = [
   {
@@ -61,12 +60,51 @@ const subjectCategories = [
   }
 ]
 
+async function sendContactForm(formData: FormData) {
+  const fullName = formData.get('fullName') as string
+  const studentEmail = formData.get('studentEmail') as string
+  const studentPhone = formData.get('studentPhone') as string
+  const parentPhone = formData.get('parentPhone') as string
+  const school = formData.get('school') as string
+  const schoolYear = formData.get('schoolYear') as string
+  const selectedSubjects = formData.get('selectedSubjects') as string
+  const message = formData.get('message') as string
+
+  const emailContent = `
+    New Contact Form Submission:
+    
+    Full Name: ${fullName}
+    Student Email: ${studentEmail}
+    Student Phone: ${studentPhone}
+    Parent Phone: ${parentPhone}
+    School: ${school}
+    School Year: ${schoolYear}
+    Selected Subjects: ${selectedSubjects}
+    
+    Message:
+    ${message}
+  `
+
+  // This is a placeholder for the actual email sending logic
+  // In a real application, you would use a service like Resend, SendGrid, or your own SMTP server
+  console.log('Sending email:', emailContent)
+
+  // Simulating an API call
+  await new Promise(resolve => setTimeout(resolve, 1000))
+
+  // Simulating a successful email send
+  if (Math.random() > 0.1) { // 90% success rate
+    return { success: true }
+  } else {
+    throw new Error('Failed to send email')
+  }
+}
+
 export default function ContactPage() {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
   const [filteredCategories, setFilteredCategories] = useState(subjectCategories)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
 
   const toggleSubject = (subject: string) => {
     setSelectedSubjects(prev =>
@@ -104,6 +142,7 @@ export default function ContactPage() {
       })
       // Reset form fields here if needed
     } catch (error) {
+      console.error('Form submission error:', error);
       toast({
         title: "Error submitting form",
         description: "Please try again later.",
@@ -116,7 +155,6 @@ export default function ContactPage() {
 
   return (
     <section className="relative min-h-screen">
-      {/* Hero Background */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/placeholder.svg"
@@ -128,7 +166,6 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/90 via-purple-500/90 to-blue-500/90" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Enrich Education
@@ -138,7 +175,6 @@ export default function ContactPage() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          {/* Left Column - Contact Information */}
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-8 text-white flex flex-col justify-between">
             <div className="space-y-6">
               <div>
@@ -168,7 +204,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right Column - Contact Form */}
           <div className="bg-white rounded-lg p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
