@@ -14,7 +14,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from "next/image"
-import { Send } from "lucide-react"
+import { Send } from 'lucide-react'
+import { useToast } from "@/hooks/use-toast"
+import { sendContactForm } from "@/app/actions"
 
 const subjectCategories = [
   {
@@ -50,12 +52,12 @@ const subjectCategories = [
   {
     name: "Further Literacy",
     subjects: ["Further Literacy"],
-    grades: [4, 5, 6, 7, 8, 9, 10]
+    grades: [4, 5, 6]
   },
   {
     name: "Further Quantitative Reasoning",
     subjects: ["Further Quantitative Reasoning"],
-    grades: [4, 5, 6, 7, 8, 9, 10]
+    grades: [4, 5, 6]
   }
 ]
 
@@ -63,6 +65,8 @@ export default function ContactPage() {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
   const [filteredCategories, setFilteredCategories] = useState(subjectCategories)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
 
   const toggleSubject = (subject: string) => {
     setSelectedSubjects(prev =>
@@ -83,6 +87,32 @@ export default function ContactPage() {
       setFilteredCategories([])
     }
   }, [selectedYear])
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setIsSubmitting(true)
+
+    const formData = new FormData(event.currentTarget)
+    formData.append('selectedSubjects', selectedSubjects.join(', '))
+    formData.append('selectedYear', selectedYear ? selectedYear.toString() : '')
+
+    try {
+      await sendContactForm(formData)
+      toast({
+        title: "Form submitted successfully",
+        description: "We'll get back to you soon!",
+      })
+      // Reset form fields here if needed
+    } catch (error) {
+      toast({
+        title: "Error submitting form",
+        description: "Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <section className="relative min-h-screen">
@@ -140,12 +170,14 @@ export default function ContactPage() {
 
           {/* Right Column - Contact Form */}
           <div className="bg-white rounded-lg p-8 shadow-lg">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Label className="text-gray-700">
+                <Label htmlFor="fullName" className="text-gray-700">
                   Student full name <span className="text-red-400">*</span>
                 </Label>
                 <Input 
+                  id="fullName"
+                  name="fullName"
                   type="text" 
                   className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
                   placeholder="Full name"
@@ -155,10 +187,12 @@ export default function ContactPage() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-gray-700">
+                  <Label htmlFor="studentEmail" className="text-gray-700">
                     Student email <span className="text-red-400">*</span>
                   </Label>
                   <Input 
+                    id="studentEmail"
+                    name="studentEmail"
                     type="email" 
                     className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
                     placeholder="Email"
@@ -166,10 +200,12 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <Label className="text-gray-700">
+                  <Label htmlFor="studentPhone" className="text-gray-700">
                     Student contact no. <span className="text-red-400">*</span>
                   </Label>
                   <Input 
+                    id="studentPhone"
+                    name="studentPhone"
                     type="tel" 
                     className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
                     placeholder="Student contact no."
@@ -180,10 +216,12 @@ export default function ContactPage() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label className="text-gray-700">
+                  <Label htmlFor="parentPhone" className="text-gray-700">
                     Parent contact no. <span className="text-red-400">*</span>
                   </Label>
                   <Input 
+                    id="parentPhone"
+                    name="parentPhone"
                     type="tel" 
                     className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
                     placeholder="Parent contact no."
@@ -191,10 +229,12 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <Label className="text-gray-700">
+                  <Label htmlFor="school" className="text-gray-700">
                     School <span className="text-red-400">*</span>
                   </Label>
                   <Input 
+                    id="school"
+                    name="school"
                     type="text" 
                     className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
                     placeholder="School name"
@@ -208,6 +248,7 @@ export default function ContactPage() {
                   Current school year <span className="text-red-400">*</span>
                 </Label>
                 <RadioGroup 
+                  name="schoolYear"
                   defaultValue="year-7" 
                   className="flex flex-wrap gap-4 mt-1"
                   onValueChange={(value) => setSelectedYear(parseInt(value.split('-')[1]))}
@@ -256,8 +297,10 @@ export default function ContactPage() {
               )}
 
               <div>
-                <Label className="text-gray-700">Message</Label>
+                <Label htmlFor="message" className="text-gray-700">Message</Label>
                 <Textarea 
+                  id="message"
+                  name="message"
                   className="bg-[#EBF3F9] border-0 mt-1 h-32 text-gray-700 placeholder-gray-500"
                   placeholder="Question/Message"
                 />
@@ -266,9 +309,10 @@ export default function ContactPage() {
               <Button 
                 type="submit" 
                 className="w-full bg-yellow-500 hover:bg-yellow-600 text-white h-12 text-lg"
+                disabled={isSubmitting}
               >
                 <Send className="w-5 h-5 mr-2" />
-                SEND MESSAGE
+                {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
               </Button>
             </form>
           </div>
