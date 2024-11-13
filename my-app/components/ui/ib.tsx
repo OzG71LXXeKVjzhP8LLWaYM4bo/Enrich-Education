@@ -9,40 +9,58 @@ type Course = {
   title: string
   description: string
   subjects: string[]
-  level: string
+  level: "SL" | "HL"
   duration: string
-  price: number
+  pricePerTerm: number
   curriculum: string[]
 }
 
 const ibCourses: Course[] = [
   {
-    id: "ib-english-a",
-    title: "IB English A: Language and Literature",
-    description: "Comprehensive preparation for IB English A, focusing on advanced literary analysis, critical thinking, and essay writing skills.",
+    id: "ib-english-a-sl",
+    title: "IB English A: Language and Literature (SL)",
+    description: "Comprehensive preparation for IB English A Standard Level, focusing on literary analysis, critical thinking, and essay writing skills.",
     subjects: ["Literary Analysis", "Comparative Study", "Essay Writing", "Oral Presentation"],
-    level: "IB Diploma (Year 11-12)",
-    duration: "2 years",
-    price: 1300,
+    level: "SL",
+    duration: "2 hours per week, 10 weeks per term",
+    pricePerTerm: 1000,
     curriculum: [
-      "In-depth analysis of literary and non-literary texts",
+      "Analysis of literary and non-literary texts",
       "Comparative analysis across different text types",
-      "Advanced essay writing techniques",
+      "Essay writing techniques",
       "Critical thinking and textual interpretation",
       "Oral commentary and presentation skills",
+      "Language in cultural context",
+      "Language and mass communication"
+    ]
+  },
+  {
+    id: "ib-english-a-hl",
+    title: "IB English A: Language and Literature (HL)",
+    description: "Intensive preparation for IB English A Higher Level, with advanced literary analysis, critical thinking, and extended essay writing skills.",
+    subjects: ["Advanced Literary Analysis", "Comparative Study", "Extended Essay Writing", "Oral Presentation"],
+    level: "HL",
+    duration: "2 hours per week, 10 weeks per term",
+    pricePerTerm: 1200,
+    curriculum: [
+      "In-depth analysis of literary and non-literary texts",
+      "Advanced comparative analysis across different text types",
+      "Extended essay writing techniques",
+      "Advanced critical thinking and textual interpretation",
+      "Higher-level oral commentary and presentation skills",
       "Language in cultural context",
       "Language and mass communication",
       "Literature - critical study and genres"
     ]
   },
   {
-    id: "ib-math-aa",
-    title: "IB Mathematics: Analysis and Approaches",
-    description: "Intensive preparation for IB Mathematics AA, covering advanced mathematical concepts and problem-solving skills.",
-    subjects: ["Calculus", "Algebra", "Functions", "Statistics and Probability"],
-    level: "IB Diploma (Year 11-12)",
-    duration: "2 years",
-    price: 1300,
+    id: "ib-math-aa-sl",
+    title: "IB Mathematics: Analysis and Approaches (SL)",
+    description: "Comprehensive preparation for IB Mathematics AA Standard Level, covering key mathematical concepts and problem-solving skills.",
+    subjects: ["Algebra", "Functions", "Trigonometry", "Statistics"],
+    level: "SL",
+    duration: "3 hours per week, 10 weeks per term",
+    pricePerTerm: 1000,
     curriculum: [
       "Number and algebra",
       "Functions",
@@ -50,84 +68,26 @@ const ibCourses: Course[] = [
       "Statistics and probability",
       "Calculus",
       "Mathematical exploration",
-      "Problem-solving strategies",
-      "Use of technology in mathematics"
+      "Problem-solving strategies"
     ]
   },
   {
-    id: "ib-physics",
-    title: "IB Physics",
-    description: "Comprehensive IB Physics course, covering theoretical concepts, practical skills, and exam preparation.",
-    subjects: ["Mechanics", "Thermodynamics", "Waves", "Electricity and Magnetism"],
-    level: "IB Diploma (Year 11-12)",
-    duration: "2 years",
-    price: 1300,
+    id: "ib-math-aa-hl",
+    title: "IB Mathematics: Analysis and Approaches (HL)",
+    description: "Intensive preparation for IB Mathematics AA Higher Level, covering advanced mathematical concepts and complex problem-solving skills.",
+    subjects: ["Advanced Calculus", "Complex Algebra", "Advanced Functions", "Statistics and Probability"],
+    level: "HL",
+    duration: "3 hours per week, 10 weeks per term",
+    pricePerTerm: 1200,
     curriculum: [
-      "Measurements and uncertainties",
-      "Mechanics",
-      "Thermal physics",
-      "Waves",
-      "Electricity and magnetism",
-      "Circular motion and gravitation",
-      "Atomic, nuclear and particle physics",
-      "Energy production"
-    ]
-  },
-  {
-    id: "ib-chemistry",
-    title: "IB Chemistry",
-    description: "In-depth IB Chemistry course, focusing on theoretical understanding, practical skills, and exam techniques.",
-    subjects: ["Organic Chemistry", "Physical Chemistry", "Analytical Chemistry", "Biochemistry"],
-    level: "IB Diploma (Year 11-12)",
-    duration: "2 years",
-    price: 1300,
-    curriculum: [
-      "Stoichiometric relationships",
-      "Atomic structure",
-      "Periodicity",
-      "Chemical bonding and structure",
-      "Energetics/thermochemistry",
-      "Chemical kinetics",
-      "Equilibrium",
-      "Acids and bases"
-    ]
-  },
-  {
-    id: "ib-biology",
-    title: "IB Biology",
-    description: "Comprehensive IB Biology course, covering all syllabus topics, practical skills, and exam preparation.",
-    subjects: ["Cell Biology", "Genetics", "Ecology", "Human Physiology"],
-    level: "IB Diploma (Year 11-12)",
-    duration: "2 years",
-    price: 1300,
-    curriculum: [
-      "Cell biology",
-      "Molecular biology",
-      "Genetics",
-      "Ecology",
-      "Evolution and biodiversity",
-      "Human physiology",
-      "Nucleic acids",
-      "Metabolism, cell respiration and photosynthesis"
-    ]
-  },
-  {
-    id: "ib-economics",
-    title: "IB Economics",
-    description: "Intensive IB Economics course, focusing on economic theories, current affairs, and essay writing skills.",
-    subjects: ["Microeconomics", "Macroeconomics", "International Economics", "Development Economics"],
-    level: "IB Diploma (Year 11-12)",
-    duration: "2 years",
-    price: 1300,
-    curriculum: [
-      "Introduction to economics",
-      "Microeconomics",
-      "Macroeconomics",
-      "International economics",
-      "Development economics",
-      "Quantitative techniques",
-      "Economic theory and real-world application",
-      "Extended essay in economics"
+      "Advanced number theory and algebra",
+      "Complex functions and equations",
+      "Advanced geometry and trigonometry",
+      "Advanced statistics and probability",
+      "Higher-level calculus",
+      "Mathematical exploration",
+      "Advanced problem-solving strategies",
+      "Use of technology in advanced mathematics"
     ]
   }
 ]
@@ -164,7 +124,7 @@ export default function IBCoursesPage() {
                   <strong>Duration:</strong> {course.duration}
                 </p>
                 <p className="text-sm text-white/80 mb-4">
-                  <strong>Price:</strong> ${course.price} per year
+                  <strong>Price per term:</strong> ${course.pricePerTerm}
                 </p>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="curriculum">
