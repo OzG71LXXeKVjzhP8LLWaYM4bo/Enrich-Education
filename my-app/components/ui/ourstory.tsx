@@ -26,7 +26,7 @@ export default function OurStoryPage() {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/placeholder.svg?height=300&width=400"
+                    src="/g2g web team photo.JPG?height=300&width=400"
                     alt="Enrich Education founders"
                     width={400}
                     height={300}
