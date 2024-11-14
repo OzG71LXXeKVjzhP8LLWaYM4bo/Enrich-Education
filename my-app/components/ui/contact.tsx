@@ -215,19 +215,30 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="mt-8">
-              <h3 className="font-bold text-xl mb-4">Burwood Location:</h3>
-              <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5661042519855!2d151.10292661521125!3d-33.87748028065435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb3e3b3de41d%3A0xd626428f74d7cc1e!2s1%2F4%20Railway%20Parade%2C%20Burwood%20NSW%202134!5e0!3m2!1sen!2sau!4v1653281352161!5m2!1sen!2sau"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+            <h3 className="font-bold text-xl mb-4">Burwood Location:</h3>
+            <div
+              className="relative w-full"
+              style={{
+                paddingBottom: '56.25%',
+                height: '0',
+                position: 'relative',
+                overflow: 'hidden',
+              }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5661042519855!2d151.10292661521125!3d-33.87748028065435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb3e3b3de41d%3A0xd626428f74d7cc1e!2s1%2F4%20Railway%20Parade%2C%20Burwood%20NSW%202134!5e0!3m2!1sen!2sau!4v1653281352161!5m2!1sen!2sau"
+                className="absolute top-0 left-0 w-full h-full"
+                style={{
+                  border: 0,
+                  pointerEvents: 'none', // Prevent iframe interaction
+                }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
+          </div>
+
           </div>
 
           <div className="bg-white rounded-lg p-8 shadow-lg">
