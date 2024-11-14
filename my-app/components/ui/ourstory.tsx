@@ -92,11 +92,9 @@ export default function OurStoryPage() {
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardContent className="p-6 md:p-10">
               <blockquote className="text-white italic text-lg mb-4">
-                Enrich Education has been instrumental in my academic success. The dedicated teachers and personalized 
-                approach helped me achieve results I never thought possible. I am grateful for the confidence and skills 
-                I have gained here.
+              Coming from Beijing in China, I was afraid of learning English and approaching my exams in the VCE. However, my teachers at Enrich Education quickly settled me in and inspired me to work hard to achieve the score required to get an offer from my dream university - University of Sydney. I am forever grateful for the academic advice and confidence from my time at Enrich.
               </blockquote>
-              <p className="text-white font-semibold">- Sarah L., HSC Graduate 2023</p>
+              <p className="text-white font-semibold">- Tyler L, VCE Graduate 2019</p>
             </CardContent>
           </Card>
         </section>
