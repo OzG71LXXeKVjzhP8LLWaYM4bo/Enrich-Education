@@ -44,7 +44,7 @@ export default function OurStoryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "Excellence", icon: Award, description: "We strive for academic excellence in all our programs." },
-              { title: "Personalized Learning", icon: Users, description: "We tailor our approach to each student&rsquo;s unique needs and learning style." },
+              { title: "Personalised Learning", icon: Users, description: "We tailor our approach to each student&rsquo;s unique needs and learning style." },
               { title: "Innovation", icon: Lightbulb, description: "We embrace innovative teaching methods and technologies." },
               { title: "Holistic Development", icon: Target, description: "We focus on developing well-rounded individuals." },
               { title: "Continuous Improvement", icon: TrendingUp, description: "We are committed to ongoing enhancement of our programs and methods." },
