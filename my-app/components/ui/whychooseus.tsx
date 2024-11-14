@@ -16,12 +16,12 @@ export function WhyChooseUs() {
     {
       icon: Target,
       title: "Specialised & Tailored Planning",
-      description: "All our teacher-made programs are customised to ensure you maximise students' likelihood of attaining top marks at school."
+      description: "All our teacher-made programs are customised to ensure you maximise students likelihood of attaining top marks at school."
     },
     {
       icon: TrendingUp,
       title: "Proven Results",
-      description: "We have a high retention rate and this shows through our students' results. Our results speak for themselves."
+      description: "We have a high retention rate and this shows through our students results. Our results speak for themselves."
     }
   ]
 
@@ -51,3 +51,4 @@ export function WhyChooseUs() {
     </section>
   )
 }
+
