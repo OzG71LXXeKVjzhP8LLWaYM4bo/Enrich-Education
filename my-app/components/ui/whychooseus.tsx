@@ -5,23 +5,23 @@ export function WhyChooseUs() {
   const reasons = [
     {
       icon: GraduationCap,
-      title: "Expert Tutors",
-      description: "Learn from top HSC performers and experienced educators who understand the NSW curriculum inside and out."
+      title: "Expert Teachers",
+      description: "Learn from Qualified Australian Accredited Teachers, top HSC & VCE performers, IB Experts who know how guide students to excel in their school assessments."
     },
     {
       icon: Users,
       title: "Small Class Sizes",
-      description: "Enjoy personalized attention in our small classes, ensuring you get the support you need to excel."
+      description: "With a maximum of nine students in a class, we ensure you get the personalised support you need to stay more focused in the classroom."
     },
     {
       icon: Target,
-      title: "Tailored Approach",
-      description: "Our programs are customized to meet your individual needs, helping you achieve your academic goals."
+      title: "Specialised & Tailored Planning",
+      description: "All our teacher-made programs are customised to ensure you maximise students' likelihood of attaining top marks at school."
     },
     {
       icon: TrendingUp,
       title: "Proven Results",
-      description: "Our students consistently achieve outstanding HSC results, with many scoring in the top bands."
+      description: "We have a high retention rate and this shows through our students' results. Our results speak for themselves."
     }
   ]
 
