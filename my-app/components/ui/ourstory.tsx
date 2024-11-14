@@ -18,7 +18,7 @@ export default function OurStoryPage() {
                   <h2 className="text-3xl font-bold text-white mb-4">Empowering Minds Since 2007</h2>
                   <p className="text-white/90 mb-4">
                   Enrich Education was founded with a vision to provide exceptional educational support to students in Sydney. Our journey began with a small group of dedicated educators who would work around the clock to ensure students excel at school and has grown into a thriving community of learners and mentors.
-                  We believe in nurturing not just academic excellence, but also critical thinking, creativity, and a love for lifelong learning through educators who &quot;teach with heart.&quot;
+                  We believe in nurturing not just academic excellence, but also critical thinking, creativity, and a love for lifelong learning through educators who teach with heart.
                   </p>
                   <p className="text-white/90">
                     We believe in nurturing not just academic excellence, but also critical thinking, creativity, and a love for lifelong learning.
@@ -93,8 +93,8 @@ export default function OurStoryPage() {
             <CardContent className="p-6 md:p-10">
               <blockquote className="text-white italic text-lg mb-4">
                 Enrich Education has been instrumental in my academic success. The dedicated teachers and personalized 
-                approach helped me achieve results I never thought possible. I&rsquo;m grateful for the confidence and skills 
-                I&rsquo;ve gained here.
+                approach helped me achieve results I never thought possible. I am grateful for the confidence and skills 
+                I have gained here.
               </blockquote>
               <p className="text-white font-semibold">- Sarah L., HSC Graduate 2023</p>
             </CardContent>
