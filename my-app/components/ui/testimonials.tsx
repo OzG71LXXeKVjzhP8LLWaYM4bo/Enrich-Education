@@ -14,7 +14,7 @@ const testimonials = [
     subject: 'Mandarin',
     atar: '99.90',
     achievements: '1st in Mandarin (QLD)',
-    graduated: '2018 Some QLD school',
+    graduated: '2018 TSS - Southport',
     degree: 'UNSW Bachelor of Medical Studies/Doctor of Medicine'
   },
   {
