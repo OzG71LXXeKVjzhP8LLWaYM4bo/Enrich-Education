@@ -29,12 +29,12 @@ export function Footer() {
                 <div>
                   <p className="font-semibold">Burwood Center:</p>
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=1%2F4+Railway+Pde%2C+Burwood%2C+2034"
+                    href="https://www.google.com/maps/search/?api=1&query=Level+4%2C+1%2F4+Railway+Pde%2C+Burwood%2C+2034"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-blue-600 transition-colors"
                   >
-                    1/4 Railway Pde, Burwood, 2034
+                    Level 4, 1/4 Railway Pde, Burwood, 2034
                   </a>
                 </div>
               </li>
