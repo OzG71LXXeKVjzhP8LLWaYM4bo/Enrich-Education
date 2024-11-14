@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/accordion"
 import { toast } from "@/hooks/use-toast"
 import Image from "next/image"
-import { Send } from 'lucide-react'
+import { Send, MapPin, Phone, Mail } from 'lucide-react'
 
 const subjectCategories = [
   {
@@ -177,9 +177,15 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-8 text-white flex flex-col justify-between">
             <div className="space-y-6">
-              <div>
-                <p className="font-semibold mb-2">Phone: (02) 9123 4567</p>
-                <p className="font-semibold">Email: admin@enricheducation.com.au</p>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 mr-2" />
+                  <p className="font-semibold">+61 430 089 992</p>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 mr-2" />
+                  <p className="font-semibold">info@enricheducation.com.au</p>
+                </div>
               </div>
 
               <div>
@@ -187,19 +193,39 @@ export default function ContactPage() {
                 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-bold text-lg">Burwood</h4>
-                    <p>123 Burwood Road</p>
+                    <h4 className="font-bold text-lg flex items-center">
+                      <MapPin className="h-5 w-5 mr-2" />
+                      Burwood
+                    </h4>
+                    <p>Level 4, 1/4 Railway Pde, Burwood, 2034</p>
                     <p className="mt-2">Weekends: 9:30am – 5pm</p>
                     <p>Monday to Thursday: 3:30pm – 8:30pm</p>
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-lg">Strathfield</h4>
-                    <p>Level 2, 40 The Boulevarde</p>
+                    <h4 className="font-bold text-lg flex items-center">
+                      <MapPin className="h-5 w-5 mr-2" />
+                      Sydney CBD
+                    </h4>
+                    <p>13/333 George St, Sydney, 2000</p>
                     <p className="mt-2">Weekends: 9:30am – 5pm</p>
                     <p>Monday to Tuesday: 3:30pm – 8:30pm</p>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="mt-8">
+              <h3 className="font-bold text-xl mb-4">Burwood Location:</h3>
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5661042519855!2d151.10292661521125!3d-33.87748028065435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb3e3b3de41d%3A0xd626428f74d7cc1e!2s1%2F4%20Railway%20Parade%2C%20Burwood%20NSW%202134!5e0!3m2!1sen!2sau!4v1653281352161!5m2!1sen!2sau"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
