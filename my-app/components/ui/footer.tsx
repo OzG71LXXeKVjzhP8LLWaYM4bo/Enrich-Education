@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 text-gray-600">
           <div>
             <h3 className="font-bold text-gray-800 mb-4 text-xl">Enrich Education</h3>
-            <p className="text-sm">Excellence in Education Since 2009</p>
+            <p className="text-sm">Excellence in Education Since 2007</p>
           </div>
           <div>
             <h3 className="font-bold text-gray-800 mb-4 text-xl">Contact</h3>
@@ -43,26 +43,6 @@ export function Footer() {
               <li>
                 <Link href="/#" className="text-gray-600 hover:text-blue-600">
                   About Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-800 mb-4 text-xl">Follow Us</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  Facebook
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  Instagram
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  LinkedIn
                 </Link>
               </li>
             </ul>
