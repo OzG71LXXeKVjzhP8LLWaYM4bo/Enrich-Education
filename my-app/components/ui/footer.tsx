@@ -40,7 +40,14 @@ export function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-pink-500" />
-                (02) 9123 4567
+                <a 
+                  href="https://wa.me/61430089992" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  +61 430 089 992
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-pink-500" />
