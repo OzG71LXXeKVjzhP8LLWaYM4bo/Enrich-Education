@@ -28,14 +28,28 @@ export function Footer() {
                 <MapPin className="h-5 w-5 mr-2 text-pink-500 mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold">Burwood Center:</p>
-                  <p>1/4 Railway Pde, Burwood, 2034</p>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=1%2F4+Railway+Pde%2C+Burwood%2C+2034"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    1/4 Railway Pde, Burwood, 2034
+                  </a>
                 </div>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-pink-500 mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold">Sydney CBD Center:</p>
-                  <p>13/333 George St, Sydney, 2000</p>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=13%2F333+George+St%2C+Sydney%2C+2000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    13/333 George St, Sydney, 2000
+                  </a>
                 </div>
               </li>
               <li className="flex items-center">
