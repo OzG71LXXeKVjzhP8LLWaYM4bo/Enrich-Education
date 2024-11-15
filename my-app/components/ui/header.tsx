@@ -23,7 +23,7 @@ export function Header() {
   ]
 
   const k6CourseItems = [
-    { href: "/courses/k6-general", label: "General Courses (K-6)" },
+    { href: "/courses/k6-general", label: "Foundational Courses (K-6)" },
     { href: "/courses/oc-prep", label: "OC Prep" },
     { href: "/courses/selective-prep", label: "Selective School Prep" },
     { href: "/courses/scholarship-prep", label: "Scholarship Prep" },
@@ -32,7 +32,7 @@ export function Header() {
   ]
 
   const courses712Items = [
-    { href: "/courses/712-general", label: "General Courses (7-12)" },
+    { href: "/courses/712-general", label: "Mainstream Courses (7-12)" },
     { href: "/courses/hsc", label: "HSC Courses" },
     { href: "/courses/ib", label: "IB Courses" },
   ]
