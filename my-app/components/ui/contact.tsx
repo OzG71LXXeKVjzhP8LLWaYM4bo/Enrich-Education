@@ -16,17 +16,18 @@ import {
 import { toast } from "@/hooks/use-toast"
 import Image from "next/image"
 import { Send, MapPin, Phone, Mail } from 'lucide-react'
+import '@/styles/globals.css'
 
 const subjectCategories = [
   {
     name: "General Courses",
     subjects: ["General Academic Support"],
-    grades: [7, 8, 9, 10]
+    grades: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   {
     name: "OC Prep",
     subjects: ["OC Preparation"],
-    grades: [4, 5]
+    grades: [3, 4, 5]
   },
   {
     name: "Selective Prep",
@@ -51,12 +52,17 @@ const subjectCategories = [
   {
     name: "Further Literacy",
     subjects: ["Further Literacy"],
-    grades: [4, 5, 6]
+    grades: [0, 1, 2, 3, 4, 5, 6]
   },
   {
     name: "Further Quantitative Reasoning",
     subjects: ["Further Quantitative Reasoning"],
-    grades: [4, 5, 6]
+    grades: [0, 1, 2, 3, 4, 5, 6]
+  },
+  {
+    name: "Early Learning",
+    subjects: ["Early Literacy", "Early Numeracy", "School Readiness"],
+    grades: [0]
   }
 ]
 
@@ -215,30 +221,19 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="mt-8">
-            <h3 className="font-bold text-xl mb-4">Burwood Location:</h3>
-            <div
-              className="relative w-full"
-              style={{
-                paddingBottom: '56.25%',
-                height: '0',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5661042519855!2d151.10292661521125!3d-33.87748028065435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb3e3b3de41d%3A0xd626428f74d7cc1e!2s1%2F4%20Railway%20Parade%2C%20Burwood%20NSW%202134!5e0!3m2!1sen!2sau!4v1653281352161!5m2!1sen!2sau"
-                className="absolute top-0 left-0 w-full h-full"
-                style={{
-                  border: 0,
-                  pointerEvents: 'none', // Prevent iframe interaction
-                }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <h3 className="font-bold text-xl mb-4">Burwood Location:</h3>
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5661042519855!2d151.10292661521125!3d-33.87748028065435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb3e3b3de41d%3A0xd626428f74d7cc1e!2s1%2F4%20Railway%20Parade%2C%20Burwood%20NSW%202134!5e0!3m2!1sen!2sau!4v1653281352161!5m2!1sen!2sau"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
-          </div>
-
           </div>
 
           <div className="bg-white rounded-lg p-8 shadow-lg">
@@ -323,9 +318,12 @@ export default function ContactPage() {
                   name="schoolYear"
                   defaultValue="year-7" 
                   className="flex flex-wrap gap-4 mt-1"
-                  onValueChange={(value) => setSelectedYear(parseInt(value.split('-')[1]))}
+                  onValueChange={(value) => {
+                    const yearNumber = value === 'kindergarten' ? 0 : parseInt(value.split('-')[1]);
+                    setSelectedYear(yearNumber);
+                  }}
                 >
-                  {["Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11", "Year 12"].map((year) => (
+                  {["Kindergarten", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11", "Year 12"].map((year) => (
                     <div key={year} className="flex items-center space-x-2">
                       <RadioGroupItem value={year.toLowerCase().replace(/\s+/g, '-')} id={year.toLowerCase().replace(/\s+/g, '-')} />
                       <Label htmlFor={year.toLowerCase().replace(/\s+/g, '-')} className="text-gray-700">{year}</Label>
