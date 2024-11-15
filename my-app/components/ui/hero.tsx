@@ -21,7 +21,7 @@ export function Hero() {
             ENRICH EDUCATION SPECIALIST TUITION
           </h1>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Achieve Your Academic Goals with Australias Premier Tutoring Service
+          Achieve Your Academic Goals with Premium 24/7 Support from the Premier Tutoring Provider in Australia
           </p>
           <Link
             href="/contact"
