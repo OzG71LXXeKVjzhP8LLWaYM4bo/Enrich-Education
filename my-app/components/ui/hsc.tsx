@@ -17,13 +17,13 @@ type Course = {
 
 const hscCourses: Course[] = [
   {
-    id: "hsc-english-advanced",
-    title: "HSC English (Advanced)",
-    description: "Comprehensive preparation for HSC English Advanced, focusing on advanced literary analysis, critical thinking, and essay writing skills.",
+    id: "hsc-english-advanced-2u",
+    title: "HSC English Advanced (2 Unit)",
+    description: "Comprehensive preparation for HSC English Advanced (2 Unit), focusing on advanced literary analysis, critical thinking, and essay writing skills.",
     subjects: ["Text Analysis", "Essay Writing", "Creative Writing", "Critical Thinking"],
     level: "Year 11-12",
-    duration: "Full HSC program (2 years)",
-    price: 1200,
+    duration: "2 hours, 10 weeks per term",
+    price: 950,
     curriculum: [
       "In-depth analysis of prescribed texts",
       "Advanced essay writing techniques",
@@ -36,13 +36,51 @@ const hscCourses: Course[] = [
     ]
   },
   {
-    id: "hsc-mathematics-advanced",
-    title: "HSC Mathematics Advanced",
-    description: "Intensive preparation for HSC Mathematics Advanced, covering all syllabus topics and focusing on problem-solving skills.",
+    id: "hsc-english-extension-1",
+    title: "HSC English Extension 1 (3 Unit)",
+    description: "Advanced course for students taking 3 Unit English, focusing on complex literary theories and sophisticated textual analysis.",
+    subjects: ["Literary Theory", "Advanced Textual Analysis", "Comparative Literature", "Critical Writing"],
+    level: "Year 11-12",
+    duration: "2 hours, 10 weeks per term",
+    price: 950,
+    curriculum: [
+      "Exploration of complex literary theories",
+      "Advanced intertextual analysis",
+      "Sophisticated essay writing techniques",
+      "In-depth study of literary movements and contexts",
+      "Development of original critical perspectives",
+      "Advanced research methodologies",
+      "Extended response composition",
+      "Intensive exam preparation and practice"
+    ]
+  },
+  {
+    id: "hsc-english-extension-2",
+    title: "HSC English Extension 2 (4 Unit)",
+    description: "Intensive course for 4 Unit English students, focusing on independent research and the creation of a major literary work.",
+    subjects: ["Independent Research", "Creative Writing", "Literary Criticism", "Project Management"],
+    level: "Year 12",
+    duration: "2 hours, 10 weeks per term",
+    price: 950,
+    curriculum: [
+      "Development of a sustained creative project",
+      "Advanced creative writing techniques",
+      "Critical reflection on the creative process",
+      "In-depth exploration of literary forms and features",
+      "Independent research methodologies",
+      "Peer review and feedback processes",
+      "Project management and time planning",
+      "Preparation for major work submission and viva voce"
+    ]
+  },
+  {
+    id: "hsc-mathematics-advanced-2u",
+    title: "HSC Mathematics Advanced (2 Unit)",
+    description: "Intensive preparation for HSC Mathematics Advanced (2 Unit), covering all syllabus topics and focusing on problem-solving skills.",
     subjects: ["Calculus", "Statistical Analysis", "Financial Mathematics", "Trigonometry"],
     level: "Year 11-12",
-    duration: "Full HSC program (2 years)",
-    price: 1200,
+    duration: "3 hours, 10 weeks per term",
+    price: 950,
     curriculum: [
       "Functions and their applications",
       "Trigonometric functions and identities",
@@ -55,79 +93,41 @@ const hscCourses: Course[] = [
     ]
   },
   {
-    id: "hsc-physics",
-    title: "HSC Physics",
-    description: "Comprehensive HSC Physics course, covering theoretical concepts, practical skills, and exam preparation.",
-    subjects: ["Mechanics", "Electromagnetism", "Thermodynamics", "Quantum Physics"],
+    id: "hsc-mathematics-extension-1",
+    title: "HSC Mathematics Extension 1 (3 Unit)",
+    description: "Advanced course for students taking 3 Unit Mathematics, covering complex mathematical concepts and problem-solving techniques.",
+    subjects: ["Advanced Calculus", "Complex Numbers", "Mechanics", "Combinatorics"],
     level: "Year 11-12",
-    duration: "Full HSC program (2 years)",
-    price: 1200,
+    duration: "3 hours, 10 weeks per term",
+    price: 950,
     curriculum: [
-      "Advanced mechanics and motion",
-      "Electromagnetism and its applications",
-      "Thermodynamics and energy transfers",
-      "Quantum mechanical nature of matter",
-      "Practical laboratory skills",
-      "Data analysis and scientific report writing",
-      "Problem-solving in physics contexts",
-      "Exam strategies and past paper practice"
+      "Further calculus techniques and applications",
+      "Trigonometric functions and inverse functions",
+      "Complex numbers and geometry",
+      "Vectors and vector applications",
+      "Advanced statistical analysis",
+      "Rates of change and parametric equations",
+      "Advanced problem-solving strategies",
+      "Intensive exam preparation and practice"
     ]
   },
   {
-    id: "hsc-chemistry",
-    title: "HSC Chemistry",
-    description: "In-depth HSC Chemistry course, focusing on theoretical understanding, practical skills, and exam techniques.",
-    subjects: ["Organic Chemistry", "Physical Chemistry", "Inorganic Chemistry", "Analytical Techniques"],
-    level: "Year 11-12",
-    duration: "Full HSC program (2 years)",
-    price: 1200,
+    id: "hsc-mathematics-extension-2",
+    title: "HSC Mathematics Extension 2 (4 Unit)",
+    description: "Intensive course for 4 Unit Mathematics students, focusing on advanced mathematical concepts and proof techniques.",
+    subjects: ["Advanced Calculus", "Complex Numbers", "Mechanics", "Proof Techniques"],
+    level: "Year 12",
+    duration: "3 hours, 10 weeks per term",
+    price: 950,
     curriculum: [
-      "Properties and structure of matter",
-      "Reactive chemistry and chemical reactions",
-      "Organic chemistry and polymers",
-      "Applying chemical ideas",
-      "Quantitative chemistry",
-      "Practical laboratory skills and safety",
-      "Data analysis and scientific report writing",
-      "Exam preparation and problem-solving strategies"
-    ]
-  },
-  {
-    id: "hsc-biology",
-    title: "HSC Biology",
-    description: "Comprehensive HSC Biology course, covering all syllabus topics, practical skills, and exam preparation.",
-    subjects: ["Genetics", "Ecology", "Evolution", "Biochemistry"],
-    level: "Year 11-12",
-    duration: "Full HSC program (2 years)",
-    price: 1200,
-    curriculum: [
-      "Cell structure and function",
-      "DNA and biotechnology",
-      "Genetics and inheritance",
-      "Ecosystem dynamics",
-      "Human impact on the environment",
-      "Evolution and biodiversity",
-      "Practical skills and scientific investigations",
-      "Data analysis and exam techniques"
-    ]
-  },
-  {
-    id: "hsc-economics",
-    title: "HSC Economics",
-    description: "Intensive HSC Economics course, focusing on economic theories, current affairs, and essay writing skills.",
-    subjects: ["Microeconomics", "Macroeconomics", "Global Economy", "Economic Policies"],
-    level: "Year 11-12",
-    duration: "Full HSC program (2 years)",
-    price: 1200,
-    curriculum: [
-      "Introduction to economics",
-      "Markets and market failure",
-      "Economic growth and development",
-      "Economic policies and management",
-      "Globalisation and international economics",
-      "Current economic issues analysis",
-      "Essay writing and data interpretation",
-      "Exam strategies and practice papers"
+      "Advanced integration techniques",
+      "Further work with complex numbers",
+      "Mechanics and motion in a plane",
+      "Proof by mathematical induction",
+      "The nature of proof and further proof by contradiction",
+      "Vectors and vector calculus",
+      "Advanced problem-solving and proof strategies",
+      "Intensive exam preparation and past paper practice"
     ]
   }
 ]
@@ -164,7 +164,7 @@ export default function HSCCoursesPage() {
                   <strong>Duration:</strong> {course.duration}
                 </p>
                 <p className="text-sm text-white/80 mb-4">
-                  <strong>Price:</strong> ${course.price} per year
+                  <strong>Price:</strong> ${course.price} per term
                 </p>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="curriculum">
