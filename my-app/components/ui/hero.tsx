@@ -21,11 +21,11 @@ export function Hero() {
             ENRICH EDUCATION SPECIALIST TUITION
           </h1>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Achieve Your Academic Goals with Sydney Premier Tutoring Service
+            Achieve Your Academic Goals with Australias Premier Tutoring Service
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-yellow-500 text-white hover:bg-yellow-600 text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-yellow-500 text-white hover:bg-yellow-600 text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 font-bold"
           >
             CLAIM YOUR FREE TRIAL
           </Link>
