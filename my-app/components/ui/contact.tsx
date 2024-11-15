@@ -16,7 +16,6 @@ import {
 import { toast } from "@/hooks/use-toast"
 import Image from "next/image"
 import { Send, MapPin, Phone, Mail } from 'lucide-react'
-import '@/styles/globals.css'
 
 const subjectCategories = [
   {
