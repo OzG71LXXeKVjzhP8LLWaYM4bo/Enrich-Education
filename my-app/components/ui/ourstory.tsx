@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, Users, Target, Award, Lightbulb, TrendingUp } from "lucide-react"
+import { BookOpen, Users, Target, Award, Lightbulb, TrendingUp } from 'lucide-react'
+import { Separator } from "@/components/ui/separator"
 
 export default function OurStoryPage() {
   return (
@@ -13,25 +14,31 @@ export default function OurStoryPage() {
         <section className="mb-16">
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardContent className="p-6 md:p-10">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="md:w-1/2">
+              <div className="flex flex-col md:flex-row items-stretch">
+                <div className="md:w-1/2 pr-0 md:pr-8">
                   <h2 className="text-3xl font-bold text-white mb-4">Empowering Minds Since 2007</h2>
                   <p className="text-white/90 mb-4">
-                  Enrich Education was founded with a vision to provide exceptional educational support to students in Sydney. Our journey began with a small group of dedicated educators who would work around the clock to ensure students excel at school and has grown into a thriving community of learners and mentors.
-                  We believe in nurturing not just academic excellence, but also critical thinking, creativity, and a love for lifelong learning through educators who teach with heart.
+                    Enrich Education was founded with a vision to provide exceptional educational support to students in Sydney. Our journey began with a small group of dedicated educators who would work around the clock to ensure students excel at school and has grown into a thriving community of learners and mentors.
                   </p>
                   <p className="text-white/90">
-                    We believe in nurturing not just academic excellence, but also critical thinking, creativity, and a love for lifelong learning.
+                    We believe in nurturing not just academic excellence, but also critical thinking, creativity, and a love for lifelong learning through educators who teach with heart.
                   </p>
                 </div>
-                <div className="md:w-1/2">
-                  <Image
-                    src="/g2g web team photo.JPG?height=300&width=400"
-                    alt="Enrich Education founders"
-                    width={400}
-                    height={300}
-                    className="rounded-lg shadow-lg"
-                  />
+                <Separator orientation="vertical" className="mx-8 hidden md:block" />
+                <div className="md:w-1/2 mt-8 md:mt-0 pl-0 md:pl-8">
+                  <div className="flex flex-col items-center">
+                    <Image
+                      src="/tyler.jpg?height=200&width=200"
+                      alt="Tyler L"
+                      width={200}
+                      height={200}
+                      className="shadow-lg mb-4"
+                    />
+                    <blockquote className="text-white italic text-lg mb-4">
+                      Coming from Beijing in China, I was afraid of learning English and approaching my exams in the VCE. However, my teachers at Enrich Education quickly settled me in and inspired me to work hard to achieve the score required to get an offer from my dream university - University of Sydney. I am forever grateful for the academic advice and confidence from my time at Enrich.
+                    </blockquote>
+                    <p className="text-white font-semibold">- Tyler L, VCE Graduate 2019</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -85,18 +92,6 @@ export default function OurStoryPage() {
               </Card>
             ))}
           </div>
-        </section>
-
-        {/* Testimonial */}
-        <section>
-          <Card className="bg-white/10 backdrop-blur-md border-white/20">
-            <CardContent className="p-6 md:p-10">
-              <blockquote className="text-white italic text-lg mb-4">
-              Coming from Beijing in China, I was afraid of learning English and approaching my exams in the VCE. However, my teachers at Enrich Education quickly settled me in and inspired me to work hard to achieve the score required to get an offer from my dream university - University of Sydney. I am forever grateful for the academic advice and confidence from my time at Enrich.
-              </blockquote>
-              <p className="text-white font-semibold">- Tyler L, VCE Graduate 2019</p>
-            </CardContent>
-          </Card>
         </section>
       </div>
     </div>
