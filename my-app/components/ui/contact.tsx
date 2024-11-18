@@ -58,11 +58,6 @@ const subjectCategories = [
     name: "Further Quantitative Reasoning",
     subjects: ["Further Quantitative Reasoning"],
     grades: [0, 1, 2, 3, 4, 5, 6]
-  },
-  {
-    name: "Early Learning",
-    subjects: ["Early Literacy", "Early Numeracy", "School Readiness"],
-    grades: [0]
   }
 ]
 
