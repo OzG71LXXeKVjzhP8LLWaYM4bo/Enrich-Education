@@ -58,6 +58,11 @@ const subjectCategories = [
     name: "Further Quantitative Reasoning",
     subjects: ["Further Quantitative Reasoning"],
     grades: [0, 1, 2, 3, 4, 5, 6]
+  },
+  {
+    name: "Early Learning",
+    subjects: ["Early Literacy", "Early Numeracy", "School Readiness"],
+    grades: [0]
   }
 ]
 
@@ -238,6 +243,19 @@ export default function ContactPage() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
+                  <Label htmlFor="parentEmail" className="text-gray-700">
+                    Parent email <span className="text-red-400">*</span>
+                  </Label>
+                  <Input 
+                    id="parentEmail"
+                    name="parentEmail"
+                    type="email" 
+                    className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
+                    placeholder="Parent email"
+                    required
+                  />
+                </div>
+                <div>
                   <Label htmlFor="parentPhone" className="text-gray-700">
                     Parent contact no. <span className="text-red-400">*</span>
                   </Label>
@@ -250,19 +268,20 @@ export default function ContactPage() {
                     required
                   />
                 </div>
-                <div>
-                  <Label htmlFor="school" className="text-gray-700">
-                    School <span className="text-red-400">*</span>
-                  </Label>
-                  <Input 
-                    id="school"
-                    name="school"
-                    type="text" 
-                    className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
-                    placeholder="School name"
-                    required
-                  />
-                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="school" className="text-gray-700">
+                  School <span className="text-red-400">*</span>
+                </Label>
+                <Input 
+                  id="school"
+                  name="school"
+                  type="text" 
+                  className="bg-[#EBF3F9] border-0 mt-1 text-gray-700 placeholder-gray-500"
+                  placeholder="School name"
+                  required
+                />
               </div>
 
               <div>
@@ -303,8 +322,7 @@ export default function ContactPage() {
                                 <Checkbox
                                   id={subject.toLowerCase().replace(/\s+/g, '-')}
                                   checked={selectedSubjects.includes(subject)}
-                                  onCheckedChange={() => toggleSubject(subject)
-                                  }
+                                  onCheckedChange={() => toggleSubject(subject)}
                                 />
                                 <Label
                                   htmlFor={subject.toLowerCase().replace(/\s+/g, '-')}

@@ -8,6 +8,7 @@ export async function sendContactForm(formData: FormData) {
   const fullName = formData.get('fullName') as string
   const studentEmail = formData.get('studentEmail') as string
   const studentPhone = formData.get('studentPhone') as string
+  const parentEmail = formData.get('parentEmail') as string
   const parentPhone = formData.get('parentPhone') as string
   const school = formData.get('school') as string
   const schoolYear = formData.get('schoolYear') as string
@@ -20,6 +21,7 @@ export async function sendContactForm(formData: FormData) {
     Full Name: ${fullName}
     Student Email: ${studentEmail}
     Student Phone: ${studentPhone}
+    Parent Email: ${parentEmail}
     Parent Phone: ${parentPhone}
     School: ${school}
     School Year: ${schoolYear}
