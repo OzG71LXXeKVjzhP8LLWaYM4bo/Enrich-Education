@@ -36,6 +36,7 @@ export async function sendContactForm(formData: FormData) {
       subject: 'New Contact Form Submission',
       text: emailContent,
     })
+    return { success: true }
   } catch (error) {
     console.error('Failed to send email:', error)
     throw new Error('Failed to send email')
