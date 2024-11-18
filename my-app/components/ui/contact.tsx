@@ -16,6 +16,7 @@ import {
 import { toast } from "@/hooks/use-toast"
 import Image from "next/image"
 import { Send, MapPin, Phone, Mail } from 'lucide-react'
+import { sendContactForm } from "@/app/actions"
 
 const subjectCategories = [
   {
@@ -65,46 +66,6 @@ const subjectCategories = [
   }
 ]
 
-async function sendContactForm(formData: FormData) {
-  const fullName = formData.get('fullName') as string
-  const studentEmail = formData.get('studentEmail') as string
-  const studentPhone = formData.get('studentPhone') as string
-  const parentPhone = formData.get('parentPhone') as string
-  const school = formData.get('school') as string
-  const schoolYear = formData.get('schoolYear') as string
-  const selectedSubjects = formData.get('selectedSubjects') as string
-  const message = formData.get('message') as string
-
-  const emailContent = `
-    New Contact Form Submission:
-    
-    Full Name: ${fullName}
-    Student Email: ${studentEmail}
-    Student Phone: ${studentPhone}
-    Parent Phone: ${parentPhone}
-    School: ${school}
-    School Year: ${schoolYear}
-    Selected Subjects: ${selectedSubjects}
-    
-    Message:
-    ${message}
-  `
-
-  // This is a placeholder for the actual email sending logic
-  // In a real application, you would use a service like Resend, SendGrid, or your own SMTP server
-  console.log('Sending email:', emailContent)
-
-  // Simulating an API call
-  await new Promise(resolve => setTimeout(resolve, 1000))
-
-  // Simulating a successful email send
-  if (Math.random() > 0.1) { // 90% success rate
-    return { success: true }
-  } else {
-    throw new Error('Failed to send email')
-  }
-}
-
 export default function ContactPage() {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([])
   const [selectedYear, setSelectedYear] = useState<number | null>(null)
@@ -120,7 +81,7 @@ export default function ContactPage() {
   }
 
   useEffect(() => {
-    if (selectedYear) {
+    if (selectedYear !== null) {
       const filtered = subjectCategories.filter(category => 
         category.grades.includes(selectedYear)
       )
@@ -137,7 +98,7 @@ export default function ContactPage() {
 
     const formData = new FormData(event.currentTarget)
     formData.append('selectedSubjects', selectedSubjects.join(', '))
-    formData.append('selectedYear', selectedYear ? selectedYear.toString() : '')
+    formData.append('schoolYear', selectedYear ? selectedYear.toString() : '')
 
     try {
       await sendContactForm(formData)
@@ -147,7 +108,7 @@ export default function ContactPage() {
       })
       // Reset form fields here if needed
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Form submission error:', error)
       toast({
         title: "Error submitting form",
         description: "Please try again later.",
@@ -331,7 +292,7 @@ export default function ContactPage() {
                 </RadioGroup>
               </div>
 
-              {selectedYear && (
+              {selectedYear !== null && (
                 <div>
                   <Label className="text-gray-700">Subject interests</Label>
                   <Accordion type="single" collapsible className="w-full">
@@ -347,7 +308,8 @@ export default function ContactPage() {
                                 <Checkbox
                                   id={subject.toLowerCase().replace(/\s+/g, '-')}
                                   checked={selectedSubjects.includes(subject)}
-                                  onCheckedChange={() => toggleSubject(subject)}
+                                  onCheckedChange={() => toggleSubject(subject)
+                                  }
                                 />
                                 <Label
                                   htmlFor={subject.toLowerCase().replace(/\s+/g, '-')}
