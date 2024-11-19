@@ -1,7 +1,32 @@
+'use client'
+
 import Link from "next/link"
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { useState } from 'react'
+import { useFormStatus } from 'react-dom'
+import { subscribeToNewsletter } from "@/app/newsletter"
+
+function SubscribeButton() {
+  const { pending } = useFormStatus()
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="px-4 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 transition-colors disabled:bg-blue-300"
+    >
+      {pending ? 'Subscribing...' : 'Subscribe'}
+    </button>
+  )
+}
 
 export function Footer() {
+  const [message, setMessage] = useState('')
+
+  async function handleSubscribe(formData: FormData) {
+    const result = await subscribeToNewsletter(formData)
+    setMessage(result.message)
+  }
+
   return (
     <footer className="bg-white text-gray-600 py-12">
       <div className="container mx-auto px-4">
@@ -97,18 +122,22 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-xl mb-4 text-purple-600">Newsletter</h3>
             <p className="text-sm mb-4">Stay updated with our latest news and offers.</p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="px-4 py-2 w-full text-gray-700 bg-gray-100 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 transition-colors"
-              >
-                Subscribe
-              </button>
+            <form action={handleSubscribe} className="flex flex-col space-y-2">
+              <div className="flex">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  className="px-4 py-2 w-full text-gray-700 bg-gray-100 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <SubscribeButton />
+              </div>
+              {message && (
+                <p className={`text-sm ${message.includes('Successfully') ? 'text-green-600' : 'text-red-600'}`}>
+                  {message}
+                </p>
+              )}
             </form>
           </div>
         </div>
