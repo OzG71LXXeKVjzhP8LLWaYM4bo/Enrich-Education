@@ -31,10 +31,10 @@ const testimonials = [
     id: 3,
     name: 'Tyler Li',
     image: 'tyler.jpg?height=200&width=200',
-    subject: 'Mathematics',
-    atar: '99.95',
-    achievements: 'Dux, 15th in Chemistry (NSW), 8th in Maths Ext 1 (NSW)',
-    graduated: '2016 James Ruse',
+    subject: 'Mandarin',
+    atar: 'IB 45',
+    achievements: '1st in Mandarin 7 in all IB Subjects',
+    graduated: '2019 Haileybury',
     degree: 'USYD Bachelor of Science (Adv)/Doctor of Medicine'
   },
   {
@@ -44,8 +44,8 @@ const testimonials = [
     subject: 'English',
     atar: '99.85',
     achievements: '1st in English Extension (NSW) First-Class Honours',
-    graduated: '2017 North Sydney Girls',
-    degree: 'UNSW LAW'
+    graduated: '2016 Rouse Hill Anglican College',
+    degree: 'UNSW Bachelor of Arts/Law First Class honours'
   }
 ]
 

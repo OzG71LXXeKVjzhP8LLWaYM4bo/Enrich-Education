@@ -12,38 +12,38 @@ const testimonials = [
     subject: 'Mandarin',
     atar: '99.90',
     achievements: '1st in Mandarin (QLD)',
-    graduated: '2018 Some QLD school',
+    graduated: '2018 TSS - Southport',
     degree: 'UNSW Bachelor of Medical Studies/Doctor of Medicine'
   },
   {
     id: 2,
-    name: 'Jay Patel',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Chemistry',
-    atar: '99.90',
-    achievements: '7th in Chemistry (NSW)',
-    graduated: '2018 Sydney Boys',
-    degree: 'UNSW Bachelor of Medical Studies/Doctor of Medicine'
+    name: 'Spencer Hu',
+    image: '/Spencer- img5.webp?height=200&width=200',
+    subject: 'Economics',
+    atar: '99.95',
+    achievements: '1st in Economics and 8th in Advanced English (NSW State Rank)',
+    graduated: '2016 James Ruse',
+    degree: 'Bachelor of Science in Economics (The Wharton School, University of Pennsylvania) (IVY League)'
   },
   {
     id: 3,
-    name: 'Justin Wu',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Chemistry',
-    atar: '99.95',
-    achievements: 'Dux, 15th in Chemistry (NSW), 8th in Maths Ext 1 (NSW)',
-    graduated: '2016 James Ruse',
+    name: 'Tyler Li',
+    image: 'tyler.jpg?height=200&width=200',
+    subject: 'Mandarin',
+    atar: 'IB 45',
+    achievements: '1st in Mandarin 7 in all IB Subjects',
+    graduated: '2019 Haileybury',
     degree: 'USYD Bachelor of Science (Adv)/Doctor of Medicine'
   },
   {
     id: 4,
-    name: 'Sarah Chen',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Mathematics',
+    name: 'Kat Zhang',
+    image: '/kat.jpg?height=200&width=200',
+    subject: 'English',
     atar: '99.85',
-    achievements: '3rd in Mathematics Extension 2 (NSW)',
-    graduated: '2017 North Sydney Girls',
-    degree: 'USYD Bachelor of Engineering (Honours)/Commerce'
+    achievements: '1st in English Extension (NSW) First-Class Honours',
+    graduated: '2016 Rouse Hill Anglican College',
+    degree: 'UNSW Bachelor of Arts/Law First Class honours'
   }
 ]
 
