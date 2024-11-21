@@ -41,7 +41,7 @@ const testimonials = [
     image: '/kat.jpg?height=200&width=200',
     subject: 'English',
     atar: '99.85',
-    achievements: '1st in English Extension (NSW) First-Class Honours',
+    achievements: '1st in English Extension (NSW)',
     graduated: '2016 Rouse Hill Anglican College',
     degree: 'UNSW Bachelor of Arts/Law First Class honours'
   }
