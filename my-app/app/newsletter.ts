@@ -39,7 +39,7 @@ export async function subscribeToNewsletter(formData: FormData) {
 
     // Send welcome email
     await resend.emails.send({
-      from: 'Enrich Education <newsletter@enricheducation.com>',
+      from: 'Enrich Education <noreply@enricheducation.com>',
       to: email,
       subject: 'Welcome to Enrich Education Newsletter',
       html: `
