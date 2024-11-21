@@ -29,9 +29,9 @@ const testimonials = [
   },
   {
     id: 3,
-    name: 'Justin Wu',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Chemistry',
+    name: 'Tyler Li',
+    image: 'tyler.jpg?height=200&width=200',
+    subject: 'Mathematics',
     atar: '99.95',
     achievements: 'Dux, 15th in Chemistry (NSW), 8th in Maths Ext 1 (NSW)',
     graduated: '2016 James Ruse',
@@ -39,13 +39,13 @@ const testimonials = [
   },
   {
     id: 4,
-    name: 'Sarah Chen',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Mathematics',
+    name: 'Kat Zhang',
+    image: '/kat.jpg?height=200&width=200',
+    subject: 'English',
     atar: '99.85',
-    achievements: '3rd in Mathematics Extension 2 (NSW)',
+    achievements: '1st in English Extension (NSW) First-Class Honours',
     graduated: '2017 North Sydney Girls',
-    degree: 'USYD Bachelor of Engineering (Honours)/Commerce'
+    degree: 'UNSW LAW'
   }
 ]
 
