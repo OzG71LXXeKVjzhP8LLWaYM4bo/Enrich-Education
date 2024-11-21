@@ -19,13 +19,13 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'Jay Patel',
-    image: '/placeholder.svg?height=200&width=200',
-    subject: 'Chemistry',
-    atar: '99.90',
-    achievements: '7th in Chemistry (NSW)',
-    graduated: '2018 Sydney Boys',
-    degree: 'UNSW Bachelor of Medical Studies/Doctor of Medicine'
+    name: 'Spencer Hu',
+    image: '/Spencer- img5.webp?height=200&width=200',
+    subject: 'Economics',
+    atar: '99.95',
+    achievements: '1st in Economics and 8th in Advanced English (NSW State Rank)',
+    graduated: '2016 James Ruse',
+    degree: 'Bachelor of Science in Economics (The Wharton School, University of Pennsylvania) (IVY League)'
   },
   {
     id: 3,
