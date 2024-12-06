@@ -11,7 +11,6 @@ type Course = {
   subjects: string[]
   level: string
   duration: string
-  price: number
   curriculum: string[]
 }
 
@@ -23,7 +22,6 @@ const furtherLiteracyCourses: Course[] = [
     subjects: ["Phonics", "Reading Comprehension", "Writing", "Vocabulary"],
     level: "Kindergarten",
     duration: "10 weeks per term",
-    price: 750,
     curriculum: [
       "Advanced phonics and letter recognition",
       "Sight word mastery",
@@ -42,7 +40,6 @@ const furtherLiteracyCourses: Course[] = [
     subjects: ["Reading Fluency", "Comprehension", "Grammar", "Creative Writing"],
     level: "Year 1-2",
     duration: "10 weeks per term",
-    price: 800,
     curriculum: [
       "Advanced phonics and word decoding",
       "Reading fluency and expression",
@@ -61,7 +58,6 @@ const furtherLiteracyCourses: Course[] = [
     subjects: ["Critical Reading", "Essay Writing", "Text Analysis", "Creative Writing"],
     level: "Year 3-4",
     duration: "10 weeks per term",
-    price: 850,
     curriculum: [
       "Advanced comprehension techniques",
       "Critical analysis of texts",
@@ -80,7 +76,6 @@ const furtherLiteracyCourses: Course[] = [
     subjects: ["Advanced Reading", "Essay Writing", "Literary Analysis", "Creative Writing"],
     level: "Year 5-6",
     duration: "10 weeks per term",
-    price: 900,
     curriculum: [
       "Complex text analysis",
       "Advanced essay writing techniques",
@@ -124,9 +119,6 @@ export default function FurtherLiteracyCoursesPage() {
                 </p>
                 <p className="text-sm text-white/80 mb-2">
                   <strong>Duration:</strong> {course.duration}
-                </p>
-                <p className="text-sm text-white/80 mb-4">
-                  <strong>Price:</strong> ${course.price} per term
                 </p>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="curriculum">
