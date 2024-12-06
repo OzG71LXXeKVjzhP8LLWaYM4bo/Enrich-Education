@@ -11,7 +11,6 @@ type Course = {
   subjects: string[]
   level: string
   duration: string
-  price: number
   curriculum: string[]
 }
 
@@ -23,7 +22,6 @@ const furtherQuantitativeReasoningCourses: Course[] = [
     subjects: ["Number Sense", "Basic Operations", "Patterns", "Shapes"],
     level: "Kindergarten",
     duration: "10 weeks per term",
-    price: 750,
     curriculum: [
       "Advanced number recognition and counting",
       "Introduction to addition and subtraction",
@@ -42,7 +40,6 @@ const furtherQuantitativeReasoningCourses: Course[] = [
     subjects: ["Advanced Operations", "Word Problems", "Geometry", "Data"],
     level: "Year 1-2",
     duration: "10 weeks per term",
-    price: 800,
     curriculum: [
       "Advanced addition and subtraction strategies",
       "Introduction to multiplication and division",
@@ -61,7 +58,6 @@ const furtherQuantitativeReasoningCourses: Course[] = [
     subjects: ["Complex Operations", "Fractions and Decimals", "Algebra Foundations", "Problem Solving"],
     level: "Year 3-4",
     duration: "10 weeks per term",
-    price: 850,
     curriculum: [
       "Multi-step problem solving",
       "Advanced fractions and decimals",
@@ -80,7 +76,6 @@ const furtherQuantitativeReasoningCourses: Course[] = [
     subjects: ["Pre-Algebra", "Advanced Problem Solving", "Statistics", "Mathematical Reasoning"],
     level: "Year 5-6",
     duration: "10 weeks per term",
-    price: 900,
     curriculum: [
       "Advanced algebraic concepts",
       "Complex problem-solving strategies",
@@ -124,9 +119,6 @@ export default function FurtherQuantitativeReasoningCoursesPage() {
                 </p>
                 <p className="text-sm text-white/80 mb-2">
                   <strong>Duration:</strong> {course.duration}
-                </p>
-                <p className="text-sm text-white/80 mb-4">
-                  <strong>Price:</strong> ${course.price} per term
                 </p>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="curriculum">
