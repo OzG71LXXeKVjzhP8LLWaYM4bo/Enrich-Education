@@ -90,7 +90,7 @@ export function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-pink-500" />
-                info@enricheducation.com
+                info@enricheducation.com.au
               </li>
             </ul>
           </div>
