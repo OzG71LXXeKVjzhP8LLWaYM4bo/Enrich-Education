@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/accordion"
 import { toast } from "@/hooks/use-toast"
 import Image from "next/image"
-import { Send, MapPin, Phone, Mail } from 'lucide-react'
+import { Send, MapPin, Phone} from 'lucide-react'
 import { sendContactForm } from "@/app/actions"
 
 const subjectCategories = [
