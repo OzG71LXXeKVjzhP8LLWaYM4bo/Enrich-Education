@@ -2,16 +2,8 @@
 
 import Link from "next/link"
 import { MapPin, Phone, Facebook, Instagram, Linkedin } from 'lucide-react'
-import { useState } from 'react'
-import { subscribeToNewsletter } from "@/app/newsletter"
 
 export function Footer() {
-  const [message, setMessage] = useState('')
-
-  async function handleSubscribe(formData: FormData) {
-    const result = await subscribeToNewsletter(formData)
-    setMessage(result.message)
-  }
 
   return (
     <footer className="bg-white text-gray-600 py-12">
