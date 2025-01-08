@@ -148,10 +148,6 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 mr-2" />
                   <p className="font-semibold">+61 430 089 992</p>
                 </div>
-                <div className="flex items-center">
-                  <Mail className="h-5 w-5 mr-2" />
-                  <p className="font-semibold">info@enricheducation.com.au</p>
-                </div>
               </div>
 
               <div>

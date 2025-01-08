@@ -88,10 +88,6 @@ export function Footer() {
                   +61 430 089 992
                 </a>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 mr-2 text-pink-500" />
-                info@enricheducation.com.au
-              </li>
             </ul>
           </div>
           <div>
