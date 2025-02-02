@@ -146,7 +146,7 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 mr-2" />
-                  <p className="font-semibold">+61 430 089 992</p>
+                  <p className="font-semibold">0430 089 992 / +61 430 089 992</p>
                 </div>
               </div>
 
@@ -160,8 +160,7 @@ export default function ContactPage() {
                       Burwood
                     </h4>
                     <p>Level 4, 1/4 Railway Pde, Burwood, 2034</p>
-                    <p className="mt-2">Weekends: 9:30am – 5pm</p>
-                    <p>Monday to Thursday: 3:30pm – 8:30pm</p>
+                    <p className="mt-2">Weekends: 8:00am – 6pm</p>
                   </div>
 
                   <div>
@@ -170,8 +169,7 @@ export default function ContactPage() {
                       Sydney CBD
                     </h4>
                     <p>13/333 George St, Sydney, 2000</p>
-                    <p className="mt-2">Weekends: 9:30am – 5pm</p>
-                    <p>Monday to Tuesday: 3:30pm – 8:30pm</p>
+                    <p>Monday to Friday: 4:30pm – 9:00pm</p>
                   </div>
                 </div>
               </div>
