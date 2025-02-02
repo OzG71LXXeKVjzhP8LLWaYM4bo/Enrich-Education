@@ -16,7 +16,7 @@ export default function OurStoryPage() {
               <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
                 <div className="lg:w-1/3 flex flex-col items-center">
                   <Image
-                    src="/sydher.jpeg"
+                    src="/tyler.jpg"
                     alt="A graduate in school uniform"
                     width={300}
                     height={400}
@@ -59,7 +59,7 @@ export default function OurStoryPage() {
             <CardContent className="p-6 md:p-10 space-y-8">
               <div className="flex flex-col items-center">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/signal-2025-02-02-180306_002-TDDczpaOBgOnrYY1Z42qYTvPE0bb4M.jpeg"
+                  src="/sydher.jpeg"
                   alt="Three students in formal school uniforms"
                   width={1200}
                   height={800}
