@@ -39,10 +39,10 @@ export default function OurStoryPage() {
                     love for lifelong learning through educators who teach with heart.
                   </p>
                   <blockquote className="text-white italic text-lg border-l-4 border-white/50 pl-4">
-                    "Coming from Beijing in China, I was afraid of learning English and approaching my exams in the VCE.
+                    Coming from Beijing in China, I was afraid of learning English and approaching my exams in the VCE.
                     However, my teachers at Enrich Education quickly settled me in and inspired me to work hard to
                     achieve the score required to get an offer from my dream university - University of Sydney. I am
-                    forever grateful for the academic advice and confidence from my time at Enrich."
+                    forever grateful for the academic advice and confidence from my time at Enrich.
                   </blockquote>
                 </div>
               </div>
