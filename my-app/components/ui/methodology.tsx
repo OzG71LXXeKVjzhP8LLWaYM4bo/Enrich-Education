@@ -68,7 +68,7 @@ export default function MethodologyPage() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
-                  <span>We recognize and reward consistent effort and improvement</span>
+                  <span>We recognise and reward consistent effort and improvement</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-400 mr-2 flex-shrink-0" />
