@@ -91,7 +91,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-200 text-center text-sm">
-          <p>© 2024 Enrich Education. All rights reserved.</p>
+          <p>© 2025 Enrich Education. All rights reserved.</p>
         </div>
       </div>
     </footer>

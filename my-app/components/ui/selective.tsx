@@ -42,7 +42,7 @@ const selectivePrepCourses: Course[] = [
     subjects: ["Advanced English", "Advanced Mathematics", "General Ability", "Writing"],
     level: "Year 5",
     duration: "10 weeks per term",
-    price: 950,
+    price: 900,
     curriculum: [
       "Advanced reading comprehension and analysis",
       "Complex mathematical problem-solving",
@@ -61,7 +61,7 @@ const selectivePrepCourses: Course[] = [
     subjects: ["English Mastery", "Mathematics Mastery", "General Ability Mastery", "Writing Mastery"],
     level: "Year 6",
     duration: "10 weeks per term",
-    price: 1000,
+    price: 900,
     curriculum: [
       "Advanced text analysis and interpretation",
       "High-level mathematical concepts and applications",

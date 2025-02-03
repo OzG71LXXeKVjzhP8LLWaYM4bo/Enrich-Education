@@ -80,7 +80,7 @@ const hscCourses: Course[] = [
     subjects: ["Calculus", "Statistical Analysis", "Financial Mathematics", "Trigonometry"],
     level: "Year 11-12",
     duration: "3 hours, 10 weeks per term",
-    price: 950,
+    price: 1190,
     curriculum: [
       "Functions and their applications",
       "Trigonometric functions and identities",
@@ -99,7 +99,7 @@ const hscCourses: Course[] = [
     subjects: ["Advanced Calculus", "Complex Numbers", "Mechanics", "Combinatorics"],
     level: "Year 11-12",
     duration: "3 hours, 10 weeks per term",
-    price: 950,
+    price: 1290,
     curriculum: [
       "Further calculus techniques and applications",
       "Trigonometric functions and inverse functions",
@@ -118,7 +118,7 @@ const hscCourses: Course[] = [
     subjects: ["Advanced Calculus", "Complex Numbers", "Mechanics", "Proof Techniques"],
     level: "Year 12",
     duration: "3 hours, 10 weeks per term",
-    price: 950,
+    price: 1490,
     curriculum: [
       "Advanced integration techniques",
       "Further work with complex numbers",

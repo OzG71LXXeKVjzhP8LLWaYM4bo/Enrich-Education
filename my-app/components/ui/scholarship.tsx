@@ -42,7 +42,7 @@ const scholarshipPrepCourses: Course[] = [
     subjects: ["Advanced English", "Advanced Mathematics", "General Ability", "Writing", "Interview Skills"],
     level: "Year 5",
     duration: "10 weeks per term",
-    price: 1000,
+    price: 950,
     curriculum: [
       "In-depth literary analysis and interpretation",
       "Advanced mathematical concepts and problem-solving",
@@ -61,7 +61,7 @@ const scholarshipPrepCourses: Course[] = [
     subjects: ["English Mastery", "Mathematics Mastery", "General Ability Mastery", "Writing Mastery", "Interview Mastery"],
     level: "Year 6",
     duration: "10 weeks per term",
-    price: 1050,
+    price: 950,
     curriculum: [
       "Advanced text analysis and critical essay writing",
       "High-level mathematical reasoning and problem-solving",

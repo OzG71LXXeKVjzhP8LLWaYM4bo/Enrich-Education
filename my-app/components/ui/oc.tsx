@@ -42,7 +42,7 @@ const ocCourses: Course[] = [
     subjects: ["English", "Mathematics", "General Ability", "Writing"],
     level: "Year 3",
     duration: "10 weeks per term",
-    price: 900,
+    price: 850,
     curriculum: [
       "Advanced reading comprehension",
       "Critical thinking and analysis",
@@ -61,7 +61,7 @@ const ocCourses: Course[] = [
     subjects: ["Advanced English", "Advanced Mathematics", "Critical Thinking", "Project-Based Learning"],
     level: "Year 4",
     duration: "10 weeks per term",
-    price: 950,
+    price: 850,
     curriculum: [
       "Advanced literature analysis",
       "Complex mathematical problem-solving",

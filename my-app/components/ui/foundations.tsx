@@ -44,7 +44,7 @@ const foundationCourses: Course[] = [
     subjects: ["Reading", "Writing", "Mathematics", "Critical Thinking"],
     level: "Year 1-2",
     duration: "10 weeks per term",
-    price: 800,
+    price: 850,
     curriculum: [
       "Advanced phonics and reading comprehension",
       "Sentence structure and basic grammar",
@@ -82,7 +82,7 @@ const foundationCourses: Course[] = [
     subjects: ["Complex Reading", "Advanced Writing", "Pre-Algebra", "Scientific Inquiry"],
     level: "Year 5-6",
     duration: "10 weeks per term",
-    price: 900,
+    price: 850,
     curriculum: [
       "Analysis of complex texts",
       "Advanced essay writing and research skills",
